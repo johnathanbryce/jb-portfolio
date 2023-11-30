@@ -1,0 +1,26 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo{
+    cursor: pointer;
+    transition: var(--hover-transition);
+}
+
+.nav ul {
+    display: flex;
+    gap: 4rem;
+}
+
+.nav_link_icon {
+    font-size: 3rem;
+    color: lightgrey;
+    transition: var(--hover-transition);
+}
+
+.nav_link_icon:hover, .logo:hover {
+    transform: scale(1.1);
+}

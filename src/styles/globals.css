@@ -1,0 +1,79 @@
+@import './vars.css';
+
+html {
+  font-size: 62.5%; /* 100% would be 16 px so now, 1 rem = 10px */
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  touch-action: pan-y;
+  overscroll-behavior-x: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+  overflow-x: hidden; 
+  background-color: var(--background-primary);
+  letter-spacing: 0.08rem;
+}
+
+main {
+  display: block; /* Render the main element consistently in IE */
+}
+
+/* Disable number input spinners for Chrome, Safari, and Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* Disable number input spinners for Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Typography */
+
+p {
+  font-size: clamp(1.4rem, 1vw + 1rem, 1.6rem); /* 14px to 16px */
+  color: var(--font-primary);
+  margin: 0;
+  font-weight: 500;
+}
+
+li {
+  font-size: clamp(1.4rem, 1vw + 1rem, 1.6rem); /* 14px to 16px */
+  color: var(--font-primary);
+}
+
+h1, h2, h3, h4, h5, h6{
+  color: var(--font-primary);
+}
+
+h1 {
+  font-size: clamp(6.6rem, 1.5vw + 1rem, 8.5rem); /* 66px to 85px */
+}
+
+h2 {
+  font-size: clamp(2.4rem, 1.5vw + 1rem, 3rem); /* 24px to 30px */
+}
+
+h3 {
+  font-size: clamp(2.2rem, 1vw + 1rem, 2.4rem); /* 22px to 24px */
+}
+
+h4 {
+  font-size: clamp(2.0rem, 0.8vw + 1rem, 2.2rem); /* 20px to 22px */
+}
+
+h5 {
+  font-size: clamp(1.8rem, 0.6vw + 1rem, 2.0rem); /* 18px to 20px */
+}
+
+h6 {
+  font-size: clamp(1.6rem, 0.4vw + 1rem, 1.8rem); /* 16px to 18px */
+}

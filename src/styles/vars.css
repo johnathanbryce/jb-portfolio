@@ -1,0 +1,25 @@
+:root {
+    /* default / misc */
+    --default-color:#F9F9F9;
+    --inactive-color: #707070;
+    --inactive-color-light: rgba(112, 112, 112, 0.5);
+
+    /* background */
+    --background-primary: #1D1D20;
+
+    /* font */
+    --font-primary:	#ECEFF1;
+
+    /* accent */
+    --accent-primary: #C97064;
+    --accent-secondary: #2196F3;
+    --accent-tertiary:#4CAF50;
+
+    /* buttons */
+
+    /* borders */
+    --border-radius: 0.5rem;
+
+    /* hover */
+    --hover-transition: 0.3s ease-in-out;
+}
