@@ -55,25 +55,25 @@ h1, h2, h3, h4, h5, h6{
 }
 
 h1 {
-  font-size: clamp(6.6rem, 1.5vw + 1rem, 8.5rem); /* 66px to 85px */
+  font-size: clamp(6.6rem, 1.5vw + 1rem, 8.5rem); 
 }
 
 h2 {
-  font-size: clamp(2.4rem, 1.5vw + 1rem, 3rem); /* 24px to 30px */
+  font-size: clamp(2.4rem, 1.5vw + 1rem, 3.4rem); 
 }
 
 h3 {
-  font-size: clamp(2.2rem, 1vw + 1rem, 2.4rem); /* 22px to 24px */
+  font-size: clamp(2.2rem, 1vw + 1rem, 2.4rem); 
 }
 
 h4 {
-  font-size: clamp(2.0rem, 0.8vw + 1rem, 2.2rem); /* 20px to 22px */
+  font-size: clamp(2.0rem, 0.8vw + 1rem, 2.2rem); 
 }
 
 h5 {
-  font-size: clamp(1.8rem, 0.6vw + 1rem, 2.0rem); /* 18px to 20px */
+  font-size: clamp(1.8rem, 0.6vw + 1rem, 2.0rem); 
 }
 
 h6 {
-  font-size: clamp(1.6rem, 0.4vw + 1rem, 1.8rem); /* 16px to 18px */
+  font-size: clamp(1.6rem, 0.4vw + 1rem, 1.8rem); 
 }
