@@ -8,10 +8,10 @@
     filter: grayscale(100%);
     width: auto;
     height: 2rem;
+    transition: transform 0.3s ease, filter 0.3s ease; 
 }
 
 .active {
-    filter: none; /* This will override other filters when active */
-    width: auto;
-    height: 3rem;
+    filter: brightness(1.2);
+    transform: scale(2); 
 }
