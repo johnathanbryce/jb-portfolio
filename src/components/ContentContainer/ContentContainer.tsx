@@ -1,5 +1,5 @@
 'use client'
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import styles from './ContentContainer.module.css'
 // Internal Components
 import Intro from '../Intro/Intro'
@@ -8,46 +8,56 @@ import CategoryCard from '../Cards/CategoryCard/CategoryCard'
 // Content Context
 import { useControlContent } from '@/context/ContentProvider'
 
-const defaultTheme = {
-  '--accent-primary': '#C97064',
-  '--accent-secondary': '#2196F3',
-  // ...other default variables
-};
-
-const getThemeForCategory = (content: string) => {
-  // Define your themes for different content
-  const themes: any = {
-    'Content1': {
-      '--accent-primary': '#ff0000',
-      '--accent-secondary': '#00ff00',
-    },
-    'Content2': {
-      '--accent-primary': '#0000ff',
-      '--accent-secondary': '#ff00ff',
-    },
-    // ...other content mappings
-  };
-
-  return themes[content] || defaultTheme;
-};
-
 export default function ContentContainer() {
   // context
-  const {activeContent, setActiveContent} = useControlContent();
+  const {activeContent, setActiveContent, setActiveTechStack} = useControlContent();
   // state
   const [activeCategory, setActiveCategory] = useState('Projects');
 
   const toggleActiveCategory = (category: string) => {
     setActiveCategory(category);
+
   };
 
+  // sets the tech stack icons on click of active category
+  useEffect(() => {
+    switch (activeContent) {
+      case 'Fit Friends':
+        setActiveTechStack(['typescript, next.js, firebase, database, api, css']);
+        break;
+      case 'MyTube':
+        setActiveTechStack(['typescript, next.js, css, api']);
+        break;
+      case 'Dice Game':
+        setActiveTechStack(['javascript, jquery, css']);
+        break;
+      case 'Romp':
+        setActiveTechStack(['typescript, react, api, css, database, javascript']);
+        break;
+      case 'JB Web Dev':
+        setActiveTechStack(['typescript, next.js, css']);
+        break;
+      case 'Julien Verschooris':
+        setActiveTechStack(['typescript, next.js, css']);
+        break;
+      case 'Labridge Farms':
+        setActiveTechStack(['typescript, next.js, css']);
+        break;
+      case 'SolLuna Essence':
+        setActiveTechStack(['javascript, jquery, css']);
+        break;
+      default:
+        setActiveTechStack([]);
+    }
+  }, [activeContent, setActiveTechStack]);
 
+  // renders based on which category is clicked and thus active
   const renderContent = () => {
     switch (activeContent) {
       case 'Intro':
         return <Intro />;
       case 'Fit Friends':
-        return <ContentCard title='Fit Friends' url='https://fitfriends.ca' github='https://github.com/johnathanbryce/fitfriends' description="Fit Friends is a dynamic full-stack web application that enables users to create, join, and invite others to personalized fitness challenges. As my debut full-stack project, it exemplifies a seamless integration of front-end flair and back-end prowess, offering an interactive platform for fitness community building."/>;
+        return <ContentCard title='Fit Friends'  url='https://fitfriends.ca' github='https://github.com/johnathanbryce/fitfriends' description="Fit Friends is a dynamic full-stack web application that enables users to create, join, and invite others to personalized fitness challenges. As my debut full-stack project, it exemplifies a seamless integration of front-end flair and back-end prowess, offering an interactive platform for fitness community building."/>;
       case 'MyTube':
         return <ContentCard title='My Tube' url='https://mytube-jb.vercel.app/' github='https://github.com/johnathanbryce/mytube' description="MyTube fetches data from multiple YouTube channels, displaying the 8 latest videos for each. With seamless integration with the YouTube API, it keeps me updated on the latest content from my favourite creators, all in one place."/>;
       case 'Dice Game':

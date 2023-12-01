@@ -2,13 +2,17 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 type ContentContextType = {
+  activeTechStack: string[]; 
   activeContent: string | null;
   setActiveContent: (content: string | null) => void;
+  setActiveTechStack: (techStack: string[]) => void; 
 };
 
 const ContentContext = createContext<ContentContextType>({
+  activeTechStack: [],
   activeContent: null,
   setActiveContent: () => {}, 
+  setActiveTechStack: () => {}, 
 });
 
 export const useControlContent = () => useContext(ContentContext);
@@ -16,29 +20,10 @@ export const useControlContent = () => useContext(ContentContext);
 // The ContentProvider.tsx context function:
 export function ContentProvider({ children }: { children: React.ReactNode }) {
   const [activeContent, setActiveContent] = useState<string | null>(null);
-
-  const updateCSSVariables = (newColors: any) => {
-    const root = document.documentElement;
-    Object.keys(newColors).forEach(key => {
-      console.log(key)
-      root.style.setProperty(key, newColors[key]);
-    });
-  };
-
-  const changeTheme = (theme: any) => {
-    // Define logic to update CSS variables
-    const newColors = {
-      '--accent-primary': theme.primaryColor,
-      '--accent-secondary': theme.secondaryColor,
-      // ...other variables
-    };
-    updateCSSVariables(newColors);
-  };
-
-
+  const [activeTechStack, setActiveTechStack] = useState<string[]>([])
 
   return (
-    <ContentContext.Provider value={{ activeContent, setActiveContent }}>
+    <ContentContext.Provider value={{activeContent, setActiveContent, activeTechStack, setActiveTechStack }}>
       {children}
     </ContentContext.Provider>
   );
