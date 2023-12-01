@@ -24,11 +24,22 @@
     top: 0; 
     left: 0;
     transform: translateY(-50%);
+    transform-origin: 50%;
     width: 100%;
     transition: all .2s linear;
+    animation: fadeIn 0.2s ease-in-out;
 }
 
-
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+        transform: translateY(-50%) scaleX(0);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(-50%) scaleX(1);
+     }
+}
 
 .projects_work_container{
     display: flex;
