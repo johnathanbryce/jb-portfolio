@@ -1,7 +1,5 @@
 import React from 'react'
 import styles from './CategoryCard.module.css';
-// Content Context
-import { useControlContent } from '@/context/ContentProvider'
 
 interface CategoryCardProps {
     title: string,
@@ -12,8 +10,6 @@ interface CategoryCardProps {
 }
 
 export default function CategoryCard({title, contentList, setActiveContent, onClick,  isActive}: CategoryCardProps) {
-    // context
-  const {activeContent, setActiveTechStack} = useControlContent();
   return (
     <div className={`${isActive ? styles.active : ''} ${styles.category_card}`}>
         <h2 className={styles.title} onClick={onClick}>{title}</h2>
