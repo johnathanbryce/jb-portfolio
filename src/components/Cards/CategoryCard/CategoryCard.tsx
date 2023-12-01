@@ -11,7 +11,7 @@ interface CategoryCardProps {
     isActive: boolean;
 }
 
-export default function CategoryCard({title, contentList, setActiveContent, onClick, isActive}: CategoryCardProps) {
+export default function CategoryCard({title, contentList, setActiveContent, onClick,  isActive}: CategoryCardProps) {
     // context
   const {activeContent, setActiveTechStack} = useControlContent();
   return (
@@ -19,7 +19,9 @@ export default function CategoryCard({title, contentList, setActiveContent, onCl
         <h2 className={styles.title} onClick={onClick}>{title}</h2>
         <ul className={styles.list_flex_wrapper}>
             {contentList.map((project: any, index: number) => (
-            <li key={index} className={styles.link} onClick={() => setActiveContent(project)}>
+            <li key={index} className={styles.link} onClick={() => {
+                setActiveContent(project);
+            }}>
                 <span className={styles.link_text}>{project}</span>
             </li>
             ))}

@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import styles from './TechStackDetails.module.css'
 //Next.js
@@ -17,20 +18,19 @@ import { useControlContent } from '@/context/ContentProvider'
 
 export default function TechStackDetails() {
   // context
+  const {activeTechStack} = useControlContent();
 
-  let isActive = null;
-    
   return (
     <aside className={styles.tech_stack}>
-        <Image src={javascript} className={`${styles.icon} ${isActive ? styles.active : ''}`}  width={50} height={50} alt="JavaScript's official logo "/>
-        <Image src={typescript} className={`${styles.icon} ${isActive ? styles.active : ''}`}  width={50} height={50} alt="TypeScript's official logo"/>
-        <Image src={css} className={`${styles.icon} ${isActive ? styles.active : ''}`}  width={50} height={50} alt="CSS's official logo"/>
-        <Image src={jquery} className={`${styles.icon} ${isActive ? styles.active : ''}`}  width={50} height={50} alt="jQuery's official logo"/>
-        <Image src={next} className={`${styles.icon} ${isActive ? styles.active : ''}`} width={50} height={50} alt="Next.js's official logo"/>
-        <Image src={react} className={`${styles.icon} ${isActive ? styles.active : ''}`}  width={50} height={50} alt="React's official logo"/>
-        <Image src={firebase} className={`${styles.icon} ${isActive ? styles.active : ''}`}  width={50} height={50} alt="Firebase's official logo"/>
-        <Image src={database} className={`${styles.icon} ${isActive ? styles.active : ''}`} width={50} height={50} alt="Firebase Realtime Database logo"/>
-        <Image src={api} className={`${styles.icon} ${isActive ? styles.active : ''}`} width={50} height={50} alt="A logo to signify the use of an API"/>
+        <Image src={javascript} className={`${styles.icon} ${activeTechStack.includes('javascript') ? styles.active : ''}`}  width={50} height={50} alt="JavaScript's official logo "/>
+        <Image src={typescript} className={`${styles.icon} ${activeTechStack.includes('typescript') ? styles.active : ''}`}  width={50} height={50} alt="TypeScript's official logo"/>
+        <Image src={css} className={`${styles.icon} ${activeTechStack.includes('css') ? styles.active : ''}`}  width={50} height={50} alt="CSS's official logo"/>
+        <Image src={jquery} className={`${styles.icon} ${activeTechStack.includes('jquery') ? styles.active : ''}`}  width={50} height={50} alt="jQuery's official logo"/>
+        <Image src={next} className={`${styles.icon} ${activeTechStack.includes('next.js') ? styles.active : ''}`} width={50} height={50} alt="Next.js's official logo"/>
+        <Image src={react} className={`${styles.icon} ${activeTechStack.includes('react') ? styles.active : ''}`}  width={50} height={50} alt="React's official logo"/>
+        <Image src={firebase} className={`${styles.icon} ${activeTechStack.includes('firebase') ? styles.active : ''}`}  width={50} height={50} alt="Firebase's official logo"/>
+        <Image src={database} className={`${styles.icon} ${activeTechStack.includes('database') ? styles.active : ''}`} width={50} height={50} alt="Firebase Realtime Database logo"/>
+        <Image src={api} className={`${styles.icon} ${activeTechStack.includes('api') ? styles.active : ''}`} width={50} height={50} alt="A logo to signify the use of an API"/>
     </aside>
   )
 }

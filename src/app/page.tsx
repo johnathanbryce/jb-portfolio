@@ -10,7 +10,7 @@ export default function Home() {
     <main className={styles.main}>
       <Header />
       <ContentContainer />
-      <TechStackDetails />
+      {/* <TechStackDetails /> */}
     </main>
   )
 }

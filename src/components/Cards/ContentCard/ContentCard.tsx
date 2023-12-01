@@ -2,17 +2,16 @@ import React from 'react'
 import styles from './ContentCard.module.css'
 // Internal Components
 import CustomLink from '@/components/CustomLink/CustomLink'
-// Next.js
-import Link from 'next/link'
 
 interface ContentCardProps {
     title: string,
+    isActive: boolean,
     description: string,
     url: string,
     github: string,
 }
 
-export default function ContentCard({title, description, url, github}: ContentCardProps) {
+export default function ContentCard({title, isActive, description, url, github}: ContentCardProps) {
   return (
     <div className={styles.content_card}>
         <h2>{title}</h2>
