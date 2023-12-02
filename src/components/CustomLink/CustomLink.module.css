@@ -8,7 +8,7 @@
     content: "";
     height: 0.2rem;
     width: 100%;
-    background: linear-gradient(0deg,var(--accent-primary)0%,var(--accent-secondary)100%);
+    background: linear-gradient(270deg,var(--accent-primary)0%, var(--accent-secondary)100%);
     opacity: 1;
     transition: all .3s ease-in-out;
     display: block;
@@ -16,4 +16,8 @@
     bottom: -0.5rem;
     left: 0;
     right: 0;
+}
+
+.link:hover::after {
+    background: linear-gradient(90deg, var(--accent-primary) 0%, var(--accent-secondary) 100%); 
 }

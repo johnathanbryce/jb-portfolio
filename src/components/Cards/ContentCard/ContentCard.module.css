@@ -28,22 +28,15 @@
     gap: 2rem;
 }
 
-.link {
-    position: relative; 
-    display: inline-block;
-    color: var(--font-primary)
-}
+/* Tablets (portrait) */
+@media (max-width: 950px) { 
+    .content_wrapper{
+        margin-left: 0;
+        padding-right: 1rem;
+    }
 
-.link::after{
-    content: "";
-    height: 2px;
-    width: 100%;
-    background: linear-gradient(0deg,var(--accent-primary)0%,var(--accent-secondary)100%);
-    opacity: 1;
-    transition: all .3s ease-in-out;
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    .content_wrapper::before {
+
+        left: 100%;
+    }
 }

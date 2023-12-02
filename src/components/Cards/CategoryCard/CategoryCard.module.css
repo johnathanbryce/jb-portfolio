@@ -86,3 +86,10 @@
 .active .link_text:hover::after {
     background: linear-gradient(90deg, var(--accent-primary) 0%, var(--accent-secondary) 100%); 
 }
+
+/* Tablets (portrait) */
+@media (max-width: 950px) { 
+    .category_card::before {
+        left: 0.2rem; /* moves to the right side */
+    }
+}
