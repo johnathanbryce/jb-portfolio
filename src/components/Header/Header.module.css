@@ -17,7 +17,7 @@
 }
 
 .nav_link_icon {
-    font-size: 3rem;
+    font-size: clamp(1.8rem, 2vw, 3rem);
     color: lightgrey;
     transition: var(--hover-transition);
 }

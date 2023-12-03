@@ -10,15 +10,17 @@
 /* Tablets (portrait) */
 @media (max-width: 950px) { 
   .main {
-    flex-direction: row;
-    height: auto;
+    flex-direction: column-reverse;
     padding: 2rem 2.5rem;
+    margin-top: 2rem;
+    height: 100vh;
   }
 }
 
 /* Mobile Devices up to 480px */
 @media (max-width: 480px) {  
   .main {
-    padding: 2rem 2rem;
+
+    height: auto;
   }
 }

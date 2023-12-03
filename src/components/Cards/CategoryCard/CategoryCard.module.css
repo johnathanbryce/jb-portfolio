@@ -67,6 +67,7 @@
 .link_text { 
     position: relative;
     display: inline;
+    font-size: clamp(1.2rem, 2vw, 1.6rem); /* match p tag from globals.css*/
 }
 
 .active .link_text::after {
@@ -89,7 +90,14 @@
 
 /* Tablets (portrait) */
 @media (max-width: 950px) { 
-    .category_card::before {
-        left: 0.2rem; /* moves to the right side */
+
+}
+
+/* Mobile Devices up to 480px */
+@media (max-width: 480px) {  
+    .category_card, .list_flex_wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
     }
 }

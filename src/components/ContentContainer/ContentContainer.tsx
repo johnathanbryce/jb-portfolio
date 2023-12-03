@@ -23,7 +23,7 @@ export default function ContentContainer() {
   useEffect(() => {
     switch (activeContent) {
       case 'Fit Friends':
-        setActiveTechStack(['typescript', 'next.js', 'firebase', 'database', 'api', 'css']);
+        setActiveTechStack(['typescript', 'node.js', 'next.js', 'firebase', 'database', 'api', 'css']);
         break;
       case 'MyTube':
         setActiveTechStack(['typescript', 'next.js', 'css', 'api']);
@@ -32,10 +32,7 @@ export default function ContentContainer() {
         setActiveTechStack(['javascript', 'jquery', 'css']);
         break;
       case 'Romp':
-        setActiveTechStack(['typescript', 'react', 'api', 'css', 'database', 'javascript']);
-        break;
-      case 'JB Web Dev':
-        setActiveTechStack(['typescript', 'next.js', 'css']);
+        setActiveTechStack(['typescript', 'node.js', 'react', 'api', 'css', 'database', 'javascript']);
         break;
       case 'Julien Verschooris':
         setActiveTechStack(['typescript', 'next.js', 'css']);
@@ -70,7 +67,7 @@ export default function ContentContainer() {
       case 'Julien Verschooris':
         return <ContentCard  title='Julien Verschooris' isActive={activeContent === 'Julien Verschooris'}  url='https://www.julienverschooris.com/' github='https://github.com/johnathanbryce/julien-verschooris' description="A portfolio website that showcases the latest personal and professional music compositions of Julien Verschooris, a multi-award-winning composer."/>;
       case 'Labridge Farms':
-        return <ContentCard  title='Labridge Farms' isActive={activeContent === 'Labridge Farms'}  url='https://labridgefarms.com/' github='https://github.com/johnathanbryce/labridge-farms' description="Serves as the digital gateway to Labridge Farms, highlighting their premium farm-raised meats and high-quality Labrador Retrievers. It offers visitors an opportunity to explore and buy farm-fresh meats and learn about adopting one of their available or upcoming Labrador Retrievers."/>;
+        return <ContentCard  title='Labridge Farms' isActive={activeContent === 'Labridge Farms'}  url='https://labridgefarms.com/' github='https://github.com/johnathanbryce/labridge-farms' description="The digital gateway to Labridge Farms, highlighting their premium farm-raised meats and high-quality Labrador Retrievers. It offers visitors an opportunity to explore and buy farm-fresh meats and learn about adopting one of their available or upcoming Labrador Retrievers."/>;
       case 'SolLuna Essence':
         return <ContentCard  title='SolLunna Essence' isActive={activeContent === 'SolLuna Essence'}  url='https://www.sollunaessence.com/' github='https://github.com/johnathanbryce/solLuna-essence' description="Provides current and prospective patrons a landing page to learn about and access services for spiritual healing and guidance techniques from Bio-Energy Healing Practitioner and Intuitive reader, Sydney Fisher."/>;
       default:
@@ -97,7 +94,7 @@ export default function ContentContainer() {
           <CategoryCard 
             title="Work" 
             onClick={() => toggleActiveCategory('Work')}
-            contentList={['Romp', 'JB Web Dev', 'Julien Verschooris', 'Labridge Farms', 'SolLuna Essence']} 
+            contentList={['Romp', 'Julien Verschooris', 'Labridge Farms', 'SolLuna Essence']} 
             setActiveContent={setActiveContent} 
             isActive={activeCategory === 'Work'}
           />

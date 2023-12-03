@@ -30,13 +30,6 @@
 
 /* Tablets (portrait) */
 @media (max-width: 950px) { 
-    .content_wrapper{
-        margin-left: 0;
-        padding-right: 1rem;
-    }
 
-    .content_wrapper::before {
 
-        left: 100%;
-    }
 }

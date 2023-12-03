@@ -1,7 +1,8 @@
 .link {
     position: relative; 
     display: inline-block;
-    color: var(--font-primary)
+    color: var(--font-primary);
+    font-size: clamp(1.2rem, 2vw, 1.6rem); /* match p tag from globals.css*/
 }
 
 .link::after{
