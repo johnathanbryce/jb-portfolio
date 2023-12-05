@@ -9,9 +9,10 @@ interface ContentCardProps {
     description: string,
     url: string,
     github: string,
+    appLink?: string
 }
 
-export default function ContentCard({title, isActive, description, url, github}: ContentCardProps) {
+export default function ContentCard({title, description, url, github, appLink}: ContentCardProps) {
   return (
     <div className={styles.content_card}>
         <h2>{title}</h2>
@@ -20,6 +21,7 @@ export default function ContentCard({title, isActive, description, url, github}:
             <div className={styles.links_container}>
               <CustomLink href={url} title="View Site" />
               <CustomLink href={github} title="View GitHub" />
+              {appLink ? <CustomLink href={appLink} title="View App"/> : null}
             </div>
         </span>
     </div>

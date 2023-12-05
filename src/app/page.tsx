@@ -8,9 +8,8 @@ import TechStackDetails from '@/components/TechStackDetails/TechStackDetails';
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Header />
       <ContentContainer />
-      {/* <TechStackDetails /> */}
+      <TechStackDetails />
     </main>
   )
 }

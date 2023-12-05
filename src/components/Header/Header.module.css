@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2rem 10rem;
     width: 100%;
 }
 
@@ -16,7 +17,7 @@
 }
 
 .nav_link_icon {
-    font-size: 3rem;
+    font-size: clamp(1.8rem, 2vw, 3rem);
     color: lightgrey;
     transition: var(--hover-transition);
 }
@@ -24,3 +25,17 @@
 .nav_link_icon:hover, .logo:hover {
     transform: scale(1.1);
 }
+
+/* Tablets (portrait) */
+@media (max-width: 950px) { 
+    .header {
+      padding: 2rem 2.5rem;
+    }
+  }
+  
+  /* Mobile Devices up to 480px */
+  @media (max-width: 480px) {  
+    .header {
+      padding: 2rem 2rem;
+    }
+  }

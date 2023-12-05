@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import Head from 'next/head';
-import { Inter } from 'next/font/google'
 import '../styles/globals.css';
 import '../styles/reset.css';
 import '../styles/vars.css';
+// Internal Components
+import Header from '@/components/Header/Header';
 // Content Context
 import { ContentProvider } from '@/context/ContentProvider';
 
@@ -29,6 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={lato.className}>
         <ContentProvider>
+          <Header />
           {children}
         </ContentProvider>
       </body>

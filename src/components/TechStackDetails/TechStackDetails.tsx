@@ -13,6 +13,7 @@ import css from '../../../public/images/css.svg'
 import javascript from '../../../public/images/javascript.svg'
 import typescript from '../../../public/images/typescript.svg'
 import jquery from '../../../public/images/jquery.svg'
+import nodejs from '../../../public/images/node-js.svg'
 // Content Context
 import { useControlContent } from '@/context/ContentProvider'
 
@@ -22,15 +23,16 @@ export default function TechStackDetails() {
 
   return (
     <aside className={styles.tech_stack}>
-        <Image src={javascript} className={`${styles.icon} ${activeTechStack.includes('javascript') ? styles.active : ''}`}  width={50} height={50} alt="JavaScript's official logo "/>
-        <Image src={typescript} className={`${styles.icon} ${activeTechStack.includes('typescript') ? styles.active : ''}`}  width={50} height={50} alt="TypeScript's official logo"/>
-        <Image src={css} className={`${styles.icon} ${activeTechStack.includes('css') ? styles.active : ''}`}  width={50} height={50} alt="CSS's official logo"/>
-        <Image src={jquery} className={`${styles.icon} ${activeTechStack.includes('jquery') ? styles.active : ''}`}  width={50} height={50} alt="jQuery's official logo"/>
-        <Image src={next} className={`${styles.icon} ${activeTechStack.includes('next.js') ? styles.active : ''}`} width={50} height={50} alt="Next.js's official logo"/>
-        <Image src={react} className={`${styles.icon} ${activeTechStack.includes('react') ? styles.active : ''}`}  width={50} height={50} alt="React's official logo"/>
-        <Image src={firebase} className={`${styles.icon} ${activeTechStack.includes('firebase') ? styles.active : ''}`}  width={50} height={50} alt="Firebase's official logo"/>
-        <Image src={database} className={`${styles.icon} ${activeTechStack.includes('database') ? styles.active : ''}`} width={50} height={50} alt="Firebase Realtime Database logo"/>
-        <Image src={api} className={`${styles.icon} ${activeTechStack.includes('api') ? styles.active : ''}`} width={50} height={50} alt="A logo to signify the use of an API"/>
+        <Image src={javascript} className={`${styles.icon} ${activeTechStack.includes('javascript') ? styles.active : ''}`} priority width={50} height={50} alt="JavaScript's official logo "/>
+        <Image src={typescript} className={`${styles.icon} ${activeTechStack.includes('typescript') ? styles.active : ''}`} priority width={50} height={50} alt="TypeScript's official logo"/>
+        <Image src={jquery} className={`${styles.icon} ${activeTechStack.includes('jquery') ? styles.active : ''}`} priority width={50} height={50} alt="jQuery's official logo"/>
+        <Image src={nodejs} className={`${styles.icon} ${activeTechStack.includes('node.js') ? styles.active : ''}`}  priority width={50} height={50} alt="Node.js's official logo"/>
+        <Image src={css} className={`${styles.icon} ${activeTechStack.includes('css') ? styles.active : ''}`}  priority width={50} height={50} alt="CSS's official logo"/>
+        <Image src={next} className={`${styles.icon} ${activeTechStack.includes('next.js') ? styles.active : ''}`} priority width={50} height={50} alt="Next.js's official logo"/>
+        <Image src={react} className={`${styles.icon} ${activeTechStack.includes('react') ? styles.active : ''}`} priority width={50} height={50} alt="React's official logo"/>
+        <Image src={firebase} className={`${styles.icon} ${activeTechStack.includes('firebase') ? styles.active : ''}`} priority width={50} height={50} alt="Firebase's official logo"/>
+        <Image src={database} className={`${styles.icon} ${activeTechStack.includes('database') ? styles.active : ''}`} priority width={50} height={50} alt="Firebase Realtime Database logo"/>
+        <Image src={api} className={`${styles.icon} ${activeTechStack.includes('api') ? styles.active : ''}`} priority width={50} height={50} alt="A logo to signify the use of an API"/>
     </aside>
   )
 }
