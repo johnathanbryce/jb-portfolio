@@ -22,8 +22,8 @@ export default function Intro() {
       </svg>
 
       <span className={styles.content_wrapper}>
-        <p> My name is Johnathan Bryce. I am a Vancouver-based Front-End Web Developer. </p>
-        <p> I am passionate about crafting dynamic, engaging websites and applications, constantly fueling my drive for continuous learning and staying up-to-date with industry trends.</p>
+        <p> I&apos;m Johnathan Bryce, a dedicated Web Developer based in Vancouver. </p>
+        <p>Crafting dynamic, engaging websites and applications is my forte. A fervent learner, I&apos;m always in sync with the latest industry trends, ensuring innovative and modern solutions.</p>
         <p> For web development inquiries, email me at <Link href="mailto:johnathanbryce@gmail.com" target='_blank' > johnathanbryce@gmail.com.</Link> </p>
         <div className={styles.button_container}>
           <button className={styles.button}>

@@ -55,15 +55,14 @@
 
 .intro_text_svg{
     /* svg path length: 751.6892700195312 */
-    margin-bottom: 5%;
-    min-width: 20rem;
-    width: 35%;
-    height: 35%;
+    padding-bottom: 1rem;
+    width: 30%;
+    height: 100%;
     stroke: var(--accent-primary);
     stroke-width: 1;
     stroke-dasharray: 751;
     stroke-dashoffset: 200;
-    animation: 3.5s fillSvg linear; 
+    animation: 5s fillSvg linear; 
 }
 
  @keyframes fillSvg{
@@ -79,5 +78,12 @@
 @media (max-width: 950px) { 
     .content_wrapper{
         gap: 1.25rem;
+    }
+}
+
+/* Mobile Devices up to 480px */
+@media (max-width: 480px) {  
+    .intro_text_svg{
+        padding-bottom: 0;
     }
 }

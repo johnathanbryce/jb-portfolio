@@ -16,10 +16,10 @@
 
 .content_details{
     transform-origin: 50%; /* animation from the center */
-    animation: fadeInFromCenter 0.4s ease-in-out;
+    animation: flipfromCenter 0.4s ease-in-out;
 }
 
-@keyframes fadeInFromCenter {
+@keyframes flipfromCenter {
     from { 
         opacity: 0;
         transform: /* translateY(-50%) */ scaleX(0);
@@ -34,18 +34,21 @@
     display: flex;
     gap: 5rem;
     /* justify-content: space-evenly; */
-    flex-basis: 40%
+    /* flex-basis: 40%; */
 }
 
 /* Tablets (portrait) */
 @media (max-width: 950px) { 
     .content_container{
         flex-direction: column;
-        padding: 4rem 0;
     }
 
     .projects_work_container{
         align-self: flex-start;
+    }
+
+    .content_relative_wrapper, .projects_work_container{
+        flex: 1;
     }
 
 }
@@ -54,8 +57,7 @@
 /* Mobile Devices (landscape) */
 @media (max-width: 775px) { 
     .content_container{
-        gap: 4rem;
-        padding: 4rem 0;
+        gap: 2rem;
     }
 }
 
