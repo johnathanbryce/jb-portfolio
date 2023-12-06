@@ -3,9 +3,11 @@ import React, {useState, useEffect} from 'react'
 import styles from './ContentContainer.module.css'
 // Internal Components
 import Intro from '../Intro/Intro'
+import About from '../About/About'
+import Skills from '../Skills/Skills'
 import ContentCard from '../Cards/ContentCard/ContentCard'
+import AboutContentCard from '../Cards/AboutContentCard/AboutContentCard'
 import CategoryCard from '../Cards/CategoryCard/CategoryCard'
-import TechStackDetails from '../TechStackDetails/TechStackDetails'
 // Content Context
 import { useControlContent } from '@/context/ContentProvider'
 
@@ -54,6 +56,18 @@ export default function ContentContainer() {
     switch (activeContent) {
       case 'Intro':
         return <Intro/>;
+      case 'About':
+        return (
+            <AboutContentCard title="About">
+              <About/>
+            </AboutContentCard>);
+      case 'Skills':
+        return (
+          <AboutContentCard title="Skills">
+            <Skills/>
+          </AboutContentCard>);
+      case 'XYZ':
+        return <p> xyz </p>;
       case 'Fit Friends':
         return <ContentCard  title='Fit Friends' isActive={activeContent === 'Fit Friends'} url='https://fitfriends.ca' github='https://github.com/johnathanbryce/fitfriends' description="A dynamic full-stack web application that enables users to create, join, and invite others to personalized fitness challenges. As my debut full-stack project, it exemplifies a seamless integration of front-end flair and back-end prowess, offering an interactive platform for fitness community building."/>;
       case 'MyTube':
@@ -75,6 +89,8 @@ export default function ContentContainer() {
     }
   };
 
+  console.log(activeContent)
+
   return (
     <section className={styles.content_container}>
         <div className={styles.content_relative_wrapper}>
@@ -83,22 +99,34 @@ export default function ContentContainer() {
           </div>
         </div>
 
-        <div className={styles.projects_work_container}>
-          <CategoryCard 
-            title="Projects" 
-            onClick={() => toggleActiveCategory('Projects')}
-            contentList={['Fit Friends', 'MyTube', 'Dice Game']} 
-            setActiveContent={setActiveContent} 
-            isActive={activeCategory === 'Projects'}
-          />
-          <CategoryCard 
-            title="Work" 
-            onClick={() => toggleActiveCategory('Work')}
-            contentList={['Romp', 'Julien Verschooris', 'Labridge Farms']} 
-            setActiveContent={setActiveContent} 
-            isActive={activeCategory === 'Work'}
-          />
-        </div>
+        {activeContent !== 'About' && activeContent !== 'Skills' && activeContent !== 'XYZ' ?(
+          <div className={styles.projects_work_container}>
+            <CategoryCard 
+              title="Projects" 
+              setActiveCategory={() => toggleActiveCategory('Projects')}
+              contentList={['Fit Friends', 'MyTube', 'Dice Game']} 
+              setActiveContent={setActiveContent} 
+              isActive={activeCategory === 'Projects'}
+            />
+            <CategoryCard 
+              title="Work" 
+              setActiveCategory={() => toggleActiveCategory('Work')}
+              contentList={['Romp', 'Julien Verschooris', 'Labridge Farms']} 
+              setActiveContent={setActiveContent} 
+              isActive={activeCategory === 'Work'}
+            />
+          </div>
+        ) : ( 
+          <div className={styles.projects_work_container}>
+            <CategoryCard 
+              title="Learn More" 
+              contentList={['About', 'Skills', 'Projects/Work']} 
+              setActiveContent={setActiveContent} 
+              isActive={true}
+            />
+          </div>
+        )
+        }
     </section>
   )
 }

@@ -1,7 +1,5 @@
-import Image from 'next/image'
 import styles from './page.module.css'
 // Internal Components
-import Header from '@/components/Header/Header'
 import ContentContainer from '@/components/ContentContainer/ContentContainer';
 import TechStackDetails from '@/components/TechStackDetails/TechStackDetails';
 

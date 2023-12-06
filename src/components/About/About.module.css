@@ -1,0 +1,81 @@
+.about{
+    display: flex;
+    gap: 2rem;
+    margin-left: 2rem;
+    position: relative;
+}
+
+.img_container {
+    width: 15rem;
+    height: 15rem;
+    flex: 0.2;
+}
+
+.profile_pic{
+    width: 100%;
+    height: 100%;;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    border: 0.2rem solid white;
+}
+
+.text_container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex: 1;
+}
+
+
+.quote {
+    padding: 0;
+    margin: 1rem;
+}
+.button_container{
+    display: flex;
+    gap: 2rem;
+    grid-column: 1 / span 2;
+}
+
+.button {
+    position: relative; 
+    display: inline-block;
+    color: var(--font-primary);
+    font-size: clamp(1.2rem, 2vw, 1.6rem); /* match p tag from globals.css*/
+    
+}
+
+.button::after{
+    content: "";
+    height: 0.2rem;
+    width: 100%;
+    background: linear-gradient(270deg,var(--accent-primary)0%, var(--accent-secondary)100%);
+    opacity: 1;
+    transition: all .3s ease-in-out;
+    display: block;
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    right: 0;
+}
+
+.button:hover::after {
+    background: linear-gradient(90deg, var(--accent-primary) 0%, var(--accent-secondary) 100%); 
+}
+
+
+ /* Tablets (portrait) */
+@media (max-width: 950px) { 
+    .content_wrapper{
+        gap: 1.25rem;
+    }
+}
+
+/* Mobile Devices up to 480px */
+@media (max-width: 480px) {  
+    .intro_text_svg{
+        padding-bottom: 0;
+    }
+}
+

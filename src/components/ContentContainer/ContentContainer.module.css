@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    flex-basis: 60%;
+    flex-basis: 80%;
 }
 
 .content_details{
@@ -33,8 +33,6 @@
 .projects_work_container{
     display: flex;
     gap: 5rem;
-    /* justify-content: space-evenly; */
-    /* flex-basis: 40%; */
 }
 
 /* Tablets (portrait) */
