@@ -6,9 +6,36 @@
     width: 100%;
 }
 
-.logo{
+.jb_svg{
     cursor: pointer;
-    transition: var(--hover-transition);
+    padding-bottom: 1rem;
+    width: 4rem;
+    height: 4rem;
+    stroke: var(--accent-primary);
+    stroke-width: 1;
+    stroke-dasharray: 751;
+    stroke-dashoffset: 200;
+    animation: 5s fillSvg linear, flipfromCenter 0.5s ease-in-out forwards;
+    transition: all 0.3s ease; 
+}
+
+@keyframes flipfromCenter {
+  from { 
+      transform: rotateY(0deg); 
+  }
+  to { 
+      transform: rotateY(360deg); 
+  }
+}
+
+
+@keyframes fillSvg{
+   0%{
+       stroke-dashoffset: 751;
+   }
+   100%{
+       stroke-dashoffset: 0;
+   }
 }
 
 .nav ul {
