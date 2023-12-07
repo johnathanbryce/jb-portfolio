@@ -5,6 +5,10 @@
     flex: 0; /* vs. content container */
 }
 
+.hidden {
+    display: none;
+}
+
 .icon {
     filter: grayscale(100%);
     height: clamp(1rem, 2vw, 3rem);
@@ -44,6 +48,10 @@
 
 /* Mobile Devices up to 480px */
 @media (max-width: 480px) {  
+    .tech_stack {
+        margin-bottom: 4rem;
+    }
+
     @keyframes flipfromCenter {
         from { 
             transform: scale(0) rotateY(0deg); 

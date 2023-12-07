@@ -42,7 +42,7 @@ function Carousel( {children}: CarouselProps) {
         <div className={styles.dots_container}>
           {embla &&
             embla.scrollSnapList().map((_snap, index) => (
-              <button
+              <div
                 key={index}
                 className={`${styles.dot} ${index === selectedIndex ? styles.active : ''}`}
                 onClick={() => handleDotClick(index)}

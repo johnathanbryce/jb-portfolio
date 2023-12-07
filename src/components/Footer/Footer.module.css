@@ -15,6 +15,7 @@
 /* Mobile Devices up to 480px */
 @media (max-width: 480px) {  
     .footer {
+        position: fixed;
         bottom: 1rem;
         right: 2rem; /* matches header padding */
     }
