@@ -8,9 +8,9 @@ import Footer from '@/components/Footer/Footer';
 // Content Context
 import { ContentProvider } from '@/context/ContentProvider';
 
-import { Lato } from 'next/font/google'
+import { K2D } from 'next/font/google'
 
-const lato = Lato({
+const k2d = K2D({
   weight: '400',
   subsets: ['latin'],
 })
@@ -28,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={lato.className}>
+      <body className={k2d.className}>
         <ContentProvider>
           <Header />
           {children}
