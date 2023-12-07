@@ -117,9 +117,4 @@
 
 /* Mobile Devices up to 480px */
 @media (max-width: 480px) {  
-    .category_card, .list_flex_wrapper{
-        display: flex;
-        flex-direction: column;
-        gap: 1.25rem;
-    }
 }

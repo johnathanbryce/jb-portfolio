@@ -17,8 +17,8 @@
 
 .dot {
     background-color: var(--default-color);
-    width: 0.75rem;
-    height: 0.75rem;
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
 }
 
@@ -31,4 +31,10 @@
     .dots_container {
         margin-top: 4rem;
     }
+
+    .dot {
+        width: 0.75rem;
+        height: 0.75rem;
+    }
+    
 }

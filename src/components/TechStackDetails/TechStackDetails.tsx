@@ -29,7 +29,7 @@ export default function TechStackDetails() {
     ) {
     return null;
   }
-
+  
   return (
     <aside className={styles.tech_stack}>
         <Image src={javascript} className={`${styles.icon} ${activeTechStack.includes('javascript') ? styles.active : ''}`} priority width={50} height={50} alt="JavaScript's official logo "/>

@@ -46,8 +46,6 @@
         flex: none;
     }
 
-    
-
     .projects_work_container{
         align-self: flex-start;
         margin-top: 2rem;
@@ -62,10 +60,13 @@
     }
 }
 
+/* Mobile Devices up to 480px */
+@media (max-width: 480px) {  
+
+}
 
 /* Tiny Mobile Devices up to 325px (e.g. galaxy fold) */
 @media (max-width: 325px) {  
-
     .content_container{
         gap: 4rem;
     }
