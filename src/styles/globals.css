@@ -44,6 +44,10 @@ blockquote{
   font-weight: 500;
 }
 
+ul li {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+}
+
 p {
   font-size: clamp(1.2rem, 2vw, 1.6rem);
   color: var(--font-primary);
@@ -77,9 +81,9 @@ h4 {
 }
 
 h5 {
-  font-size: clamp(1.8rem, 0.6vw + 1rem, 2.0rem); 
+  font-size: clamp(1.65rem, 0.6vw + 1rem, 2.0rem); 
 }
 
 h6 {
-  font-size: clamp(1.6rem, 0.4vw + 1rem, 1.8rem); 
+  font-size: clamp(1.45rem, 0.45vw + 1rem, 1.65rem); 
 }
