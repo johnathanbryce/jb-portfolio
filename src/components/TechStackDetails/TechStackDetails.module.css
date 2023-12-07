@@ -48,22 +48,18 @@
 
 /* Mobile Devices up to 480px */
 @media (max-width: 480px) {  
-    .tech_stack {
-        margin-bottom: 4rem;
-    }
-
     @keyframes flipfromCenter {
         from { 
             transform: scale(0) rotateY(0deg); 
         }
         to { 
-            transform: scale(3) rotateY(360deg); 
+            transform: scale(2.5) rotateY(2.560deg); 
         }
     }
 
     @keyframes flipBack {
         from {
-            transform: scale(3) rotateY(360deg); 
+            transform: scale(2.5) rotateY(360deg); 
         }
         to {
             transform: scale(1) rotateY(720deg); 

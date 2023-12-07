@@ -26,6 +26,11 @@
 @media (max-width: 480px) {  
     .skills {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .skills_category ul li {
+        padding: 0.2rem 0;
     }
 }
 

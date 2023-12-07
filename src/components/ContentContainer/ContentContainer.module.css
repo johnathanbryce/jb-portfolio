@@ -38,8 +38,7 @@
 @media (max-width: 950px) { 
     .content_container{
         flex-direction: column;
-/*         justify-content: space-evenly;
-        justify-content: initial; */
+        /* margin-top: 4rem; */
     }
 
     .content_relative_wrapper, .projects_work_container{
@@ -62,7 +61,9 @@
 
 /* Mobile Devices up to 480px */
 @media (max-width: 480px) {  
-
+    .content_container{
+        margin-top: 2rem;
+    }
 }
 
 /* Tiny Mobile Devices up to 325px (e.g. galaxy fold) */

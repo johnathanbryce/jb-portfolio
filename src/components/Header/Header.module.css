@@ -36,7 +36,7 @@
   /* Mobile Devices up to 480px */
   @media (max-width: 480px) {  
     .header {
-      padding: 2rem 2rem;
+      padding: 1rem 2rem;
     }
   }
 
