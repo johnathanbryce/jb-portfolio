@@ -12,12 +12,13 @@
   .main {
     flex-direction: column-reverse;
     padding: 2rem 2.5rem;
+    height: initial;
   }
 }
 
 /* Mobile Devices up to 480px */
 @media (max-width: 480px) {  
   .main {
-    
+   
   }
 }

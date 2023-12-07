@@ -37,6 +37,12 @@ input[type="number"] {
 }
 
 /* Typography */
+blockquote{
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  color: var(--font-primary);
+  margin: 0;
+  font-weight: 500;
+}
 
 p {
   font-size: clamp(1.2rem, 2vw, 1.6rem);

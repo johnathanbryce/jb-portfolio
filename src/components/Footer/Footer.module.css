@@ -1,6 +1,6 @@
 .footer {
     position: absolute;
-    bottom: 10%;
+    bottom: 12%;
     right: 10rem; /* matches header padding */
 }
 
@@ -15,7 +15,7 @@
 /* Mobile Devices up to 480px */
 @media (max-width: 480px) {  
     .footer {
-        bottom: -2rem;
+        bottom: 1rem;
         right: 2rem; /* matches header padding */
     }
 
@@ -24,10 +24,10 @@
     }
 }
 
-/* Tiny Mobile Devices up to 325px (e.g. galaxy fold) */
-@media (max-width: 325px) {  
+/* Tiny Mobile Devices up to 380px (e.g. galaxy fold, iphone SE) */
+@media (max-width: 380px) {  
     .footer {
-        left: 3rem;
-        bottom: 0.5rem;
+        display: none;
     }
+
 }

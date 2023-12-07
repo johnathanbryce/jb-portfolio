@@ -95,8 +95,6 @@ export default function ContentContainer() {
     }
   };
 
-  console.log(activeContent)
-
   return (
     <section className={styles.content_container}>
         <div className={styles.content_relative_wrapper}>
@@ -126,7 +124,7 @@ export default function ContentContainer() {
           <div className={styles.projects_work_container}>
             <CategoryCard 
               title="Learn More" 
-              contentList={['About', 'Skills', 'Testimonials', 'Back to Projects/Work']} 
+              contentList={['About', 'Skills', 'Testimonials']} 
               setActiveContent={setActiveContent} 
               isActive={true}
             />
