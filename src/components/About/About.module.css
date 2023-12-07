@@ -7,6 +7,7 @@
 
 .img_container {
     min-width: 15.5rem;
+    max-height: 35rem;
     flex: 0.1;
 }
 
@@ -75,10 +76,14 @@
 
 /* Mobile Devices (landscape) */
 @media (max-width: 775px) { 
-    .img_container {
-
-        flex: 0.4;
-
+    .about{
+        flex-direction: column; 
+        gap: 1rem;
+        margin-left: 0;
+        position: relative;
+    }
+    .profile_pic, .img_container{
+        display: none;
     }
     
     .text_container {
@@ -89,17 +94,6 @@
 
 /* Mobile Devices up to 480px */
 @media (max-width: 480px) {  
-    .about{
-        flex-direction: column; 
-        gap: 1rem;
-        margin-left: 0;
-        position: relative;
-    }
-
-    .profile_pic, .img_container{
-        display: none;
-    }
-
     .text_container {
         gap: 1rem;
     }

@@ -21,8 +21,12 @@ export default function TechStackDetails() {
   // context
   const {activeTechStack, activeContent} = useControlContent();
   
-  // don't render if activeContent is 'About' or 'Skills'
-  if (activeContent === null || activeContent === 'About' || activeContent === 'Skills' || activeContent === 'Intro' || activeContent === 'Testimonials') {
+  // don't render techstackdetails if activeContent is one of these
+  if (activeContent === null || activeContent === 'About' || 
+      activeContent === 'Skills' || activeContent === 'Intro' || 
+      activeContent === 'Testimonials' || activeContent === 'Projects' ||
+      activeContent === 'Back to Projects/Work'
+    ) {
     return null;
   }
 
