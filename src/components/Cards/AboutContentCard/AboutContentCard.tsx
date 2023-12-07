@@ -22,7 +22,7 @@ export default function AboutContentCard({title, children}: ContentCardProps) {
           {children}
           <div className={styles.button_container}>
               <button className={styles.button} onClick={() =>setActiveContent('Projects')}>
-                Projects/Work
+                Back to Projects/Work
               </button>
           </div>
       </span>

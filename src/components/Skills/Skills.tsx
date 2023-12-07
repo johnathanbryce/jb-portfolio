@@ -30,6 +30,16 @@ export default function Skills() {
           <li>API Integration</li>
         </ul>
     </div>
+
+    <div className={styles.skills_category}>
+        <h5>Misc:</h5>
+        <ul>
+          <li>Git/GitHub</li>
+          <li>Recoil</li>
+          <li>React Router</li>
+          <li>Figma</li>
+        </ul>
+    </div>
   </section>
   )
 }
