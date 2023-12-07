@@ -39,3 +39,10 @@
       padding: 2rem 2rem;
     }
   }
+
+  /* Tiny Mobile Devices up to 325px (e.g. galaxy fold) */
+@media (max-width: 325px) {  
+  .header {
+    margin-bottom: 2.5rem;
+  }
+}

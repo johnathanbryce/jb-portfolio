@@ -1,12 +1,16 @@
+'use client'
 import React from 'react'
 import styles from './Intro.module.css'
 // Next.js
 import Link from 'next/link'
 // Internal Components
 import CustomLink from '@/components/CustomLink/CustomLink'
-
+// Context
+import { useControlContent } from '@/context/ContentProvider'
 
 export default function Intro() {
+  // context
+  const {setActiveContent} = useControlContent();
   return (
     <section className={styles.intro}>
       <svg className={styles.intro_text_svg} width="148" height="44" viewBox="0 0 148 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,8 +30,8 @@ export default function Intro() {
         <p>Crafting dynamic, engaging websites and applications is my forte. A fervent learner, I&apos;m always in sync with the latest industry trends, ensuring innovative and modern solutions.</p>
         <p> For web development inquiries, email me at <Link href="mailto:johnathanbryce@gmail.com" target='_blank' > johnathanbryce@gmail.com.</Link> </p>
         <div className={styles.button_container}>
-          <button className={styles.button}>
-            About Me
+          <button className={styles.button} onClick={() =>setActiveContent('About')}>
+            About
           </button>
           <CustomLink href="https://www.johnbrycewebdev.com/" title="johnbrycewebdev.com"/>
         </div>

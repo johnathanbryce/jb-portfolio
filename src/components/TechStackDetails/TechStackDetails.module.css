@@ -7,18 +7,18 @@
 
 .icon {
     filter: grayscale(100%);
-    height: clamp(1.2rem, 2vw, 3rem);
-    width: clamp(1.2rem, 2vw, 3rem);
+    height: clamp(1rem, 2vw, 3rem);
+    width: clamp(1rem, 2vw, 3rem);
     transition: transform 0.3s ease, filter 0.3s ease; 
     animation: flipBack 0.5s ease-in-out forwards;
 }
 
 @keyframes flipBack {
     from {
-        transform: scale(2) rotateY(360deg); /* Start from scaled up and rotated */
+        transform: scale(2) rotateY(360deg); 
     }
     to {
-        transform: scale(1) rotateY(720deg); /* Scale back to normal and continue rotation */
+        transform: scale(1) rotateY(720deg); 
     }
 }
 
@@ -35,20 +35,45 @@
 
 @keyframes flipfromCenter {
     from { 
-        transform: scale(0) rotateY(0deg); /* Start from no horizontal scale and no rotation */
+        transform: scale(0) rotateY(0deg); 
     }
     to { 
-        transform: scale(2) rotateY(360deg); /* Scale back to normal and rotate 180 degrees */
+        transform: scale(2) rotateY(360deg); 
     }
 }
 
-/* Tablets (portrait) */
-@media (max-width: 950px){
+/* Mobile Devices up to 480px */
+@media (max-width: 480px) {  
+    @keyframes flipfromCenter {
+        from { 
+            transform: scale(0) rotateY(0deg); 
+        }
+        to { 
+            transform: scale(3) rotateY(360deg); 
+        }
+    }
+
+    @keyframes flipBack {
+        from {
+            transform: scale(3) rotateY(360deg); 
+        }
+        to {
+            transform: scale(1) rotateY(720deg); 
+        }
+    }
 }
 
 /* Mobile Devices up to 380px */
 @media (max-width: 380px) {  
     .tech_stack{
         margin-bottom: 1.5rem;
+    }
+}
+
+/* Tiny Mobile Devices up to 325px (e.g. galaxy fold) */
+@media (max-width: 325px) {  
+    .icon {
+        height: 0.8rem;
+        width: 0.8rem;
     }
 }

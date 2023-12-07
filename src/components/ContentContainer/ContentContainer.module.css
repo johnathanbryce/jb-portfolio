@@ -9,9 +9,8 @@
 .content_relative_wrapper{
     display: flex;
     align-items: center;
-    justify-content: center;
     position: relative;
-    flex-basis: 60%;
+    flex-basis: 70%;
 }
 
 .content_details{
@@ -33,26 +32,27 @@
 .projects_work_container{
     display: flex;
     gap: 5rem;
-    /* justify-content: space-evenly; */
-    /* flex-basis: 40%; */
 }
 
 /* Tablets (portrait) */
 @media (max-width: 950px) { 
     .content_container{
         flex-direction: column;
+        justify-content: space-evenly;
+        justify-content: initial;
+        gap: 4rem;
+    }
+
+    .content_relative_wrapper, .projects_work_container{
+        margin-top: 8rem;
+        flex: none;
     }
 
     .projects_work_container{
         align-self: flex-start;
     }
 
-    .content_relative_wrapper, .projects_work_container{
-        flex: 1;
-    }
-
 }
-
 
 /* Mobile Devices (landscape) */
 @media (max-width: 775px) { 
@@ -63,4 +63,20 @@
 
 /* Mobile Devices up to 480px */
 @media (max-width: 480px) {  
+    .content_relative_wrapper, .projects_work_container{
+        margin-top: 4rem;
+        
+    }
+}
+
+/* Tiny Mobile Devices up to 325px (e.g. galaxy fold) */
+@media (max-width: 325px) {  
+
+    .content_container{
+        gap: 4rem;
+    }
+
+    .projects_work_container{
+        gap: 0;
+    }
 }

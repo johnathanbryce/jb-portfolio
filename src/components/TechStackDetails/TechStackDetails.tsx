@@ -19,7 +19,16 @@ import { useControlContent } from '@/context/ContentProvider'
 
 export default function TechStackDetails() {
   // context
-  const {activeTechStack} = useControlContent();
+  const {activeTechStack, activeContent} = useControlContent();
+  
+  // don't render techstackdetails if activeContent is one of these
+  if (activeContent === null || activeContent === 'About' || 
+      activeContent === 'Skills' || activeContent === 'Intro' || 
+      activeContent === 'Testimonials' || activeContent === 'Projects' ||
+      activeContent === 'Back to Projects/Work'
+    ) {
+    return null;
+  }
 
   return (
     <aside className={styles.tech_stack}>
