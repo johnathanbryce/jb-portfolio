@@ -22,7 +22,7 @@ export default function TechStackDetails() {
   const {activeTechStack, activeContent} = useControlContent();
   
   // don't render if activeContent is 'About' or 'Skills'
-  if (activeContent === 'About' || activeContent === 'Skills') {
+  if (activeContent === null || activeContent === 'About' || activeContent === 'Skills' || activeContent === 'Intro' || activeContent === 'Testimonials') {
     return null;
   }
 

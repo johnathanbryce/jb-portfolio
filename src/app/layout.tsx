@@ -4,6 +4,7 @@ import '../styles/reset.css';
 import '../styles/vars.css';
 // Internal Components
 import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
 // Content Context
 import { ContentProvider } from '@/context/ContentProvider';
 
@@ -31,6 +32,7 @@ export default function RootLayout({
         <ContentProvider>
           <Header />
           {children}
+          <Footer />
         </ContentProvider>
       </body>
     </html>

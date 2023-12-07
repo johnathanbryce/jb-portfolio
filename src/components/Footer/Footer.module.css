@@ -1,0 +1,33 @@
+.footer {
+    position: absolute;
+    bottom: 10%;
+    right: 10rem; /* matches header padding */
+}
+
+/* Tablets (portrait) */
+@media (max-width: 950px) { 
+    .footer {
+        bottom: 0.5rem;
+        right: 2.5rem; /* matches header padding */
+    }
+}
+  
+/* Mobile Devices up to 480px */
+@media (max-width: 480px) {  
+    .footer {
+        bottom: -2rem;
+        right: 2rem; /* matches header padding */
+    }
+
+    .footer p {
+        font-size: 1rem;
+    }
+}
+
+/* Tiny Mobile Devices up to 325px (e.g. galaxy fold) */
+@media (max-width: 325px) {  
+    .footer {
+        left: 3rem;
+        bottom: 0.5rem;
+    }
+}

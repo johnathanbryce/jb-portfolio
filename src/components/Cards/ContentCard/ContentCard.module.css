@@ -33,3 +33,10 @@
 
 
 }
+
+/* Mobile Devices up to 480px */
+@media (max-width: 480px) {  
+    .content_card{
+        gap: 1rem;
+    }
+}

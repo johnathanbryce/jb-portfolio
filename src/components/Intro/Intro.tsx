@@ -31,7 +31,7 @@ export default function Intro() {
         <p> For web development inquiries, email me at <Link href="mailto:johnathanbryce@gmail.com" target='_blank' > johnathanbryce@gmail.com.</Link> </p>
         <div className={styles.button_container}>
           <button className={styles.button} onClick={() =>setActiveContent('About')}>
-            My Journey
+            About
           </button>
           <CustomLink href="https://www.johnbrycewebdev.com/" title="johnbrycewebdev.com"/>
         </div>

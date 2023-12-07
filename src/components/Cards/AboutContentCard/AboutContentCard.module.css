@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-
 }
 
 .content_wrapper{
@@ -74,4 +73,11 @@
 @media (max-width: 950px) { 
 
 
+}
+
+/* Mobile Devices up to 480px */
+@media (max-width: 480px) {  
+    .content_card{
+        gap: 1rem;
+    }
 }
