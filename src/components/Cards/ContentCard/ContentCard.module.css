@@ -23,15 +23,26 @@
     left: -2rem;
 }
 
+.tech_stack_container{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.tech_stack_container li {
+    font-size: clamp(1rem, 2vw, 1.4rem);
+}
+
 .links_container{
     display: flex;
     gap: 2rem;
 }
 
-/* Tablets (portrait) */
-@media (max-width: 950px) { 
-
-
+/* Mobile Devices (landscape) */
+@media (max-width: 775px) { 
+    .tech_stack_container{
+        gap: 0.75rem;
+    }
 }
 
 /* Mobile Devices up to 480px */
@@ -39,4 +50,5 @@
     .content_card{
         gap: 1rem;
     }
+
 }

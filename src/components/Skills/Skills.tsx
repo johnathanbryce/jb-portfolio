@@ -3,7 +3,7 @@ import styles from './Skills.module.css'
 
 export default function Skills() {
   return (
-  <section className={styles.skills}>
+  <article className={styles.skills}>
     <div className={styles.skills_category}>
         <h5>Frontend</h5>
         <ul>
@@ -40,6 +40,6 @@ export default function Skills() {
           <li>Figma</li>
         </ul>
     </div>
-  </section>
+  </article>
   )
 }

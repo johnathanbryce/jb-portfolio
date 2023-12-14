@@ -12,8 +12,8 @@ export default function Intro() {
   // context
   const {setActiveContent} = useControlContent();
   return (
-    <section className={styles.intro}>
-      <svg className={styles.intro_text_svg} width="148" height="44" viewBox="0 0 148 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <article className={styles.intro}>
+      <svg className={styles.intro_text_svg} width="148" height="44" viewBox="0 0 148 44" fill="none" xmlns="http://www.w3.org/2000/svg"  aria-label="Say Hello">
           <defs>
               <linearGradient id="svgGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                   <stop offset="0%" stop-color="#C97064" />
@@ -25,7 +25,7 @@ export default function Intro() {
               stroke-width="1"/>
       </svg>
 
-      <span className={styles.content_wrapper}>
+      <div className={styles.content_wrapper}>
         <p> I&apos;m Johnathan Bryce, a dedicated Web Developer based in Vancouver. </p>
         <p>Crafting dynamic, engaging websites and applications is my forte. A fervent learner, I&apos;m always in sync with the latest industry trends, ensuring innovative and modern solutions.</p>
         <p> For web development inquiries, email me at <Link href="mailto:johnathanbryce@gmail.com" target='_blank' > johnathanbryce@gmail.com.</Link> </p>
@@ -35,8 +35,7 @@ export default function Intro() {
           </button>
           <CustomLink href="https://www.johnbrycewebdev.com/" title="johnbrycewebdev.com"/>
         </div>
-      </span>
- 
-    </section>
+      </div>
+    </article>
   )
 }
