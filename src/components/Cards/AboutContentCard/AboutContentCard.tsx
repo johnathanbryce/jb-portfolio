@@ -18,14 +18,14 @@ export default function AboutContentCard({title, children}: ContentCardProps) {
   return (
     <div className={styles.content_card}>
       <h2>{title}</h2>
-      <span className={styles.content_wrapper}>
+      <div className={styles.content_wrapper}>
           {children}
           <div className={styles.button_container}>
               <button className={styles.button} onClick={() =>setActiveContent('Projects')}>
                 Back to Projects/Work
               </button>
           </div>
-      </span>
+      </div>
     </div>
   )
 }

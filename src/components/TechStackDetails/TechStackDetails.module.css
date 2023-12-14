@@ -19,7 +19,7 @@
 
 @keyframes flipBack {
     from {
-        transform: scale(2) rotateY(360deg); 
+        transform: scale(1.5) rotateY(360deg); 
     }
     to {
         transform: scale(1) rotateY(720deg); 
@@ -42,7 +42,7 @@
         transform: scale(0) rotateY(0deg); 
     }
     to { 
-        transform: scale(2) rotateY(360deg); 
+        transform: scale(1.5) rotateY(360deg); 
     }
 }
 
@@ -64,6 +64,14 @@
         to {
             transform: scale(1) rotateY(720deg); 
         }
+    }
+}
+
+/* Tablets (portrait) */
+@media (max-width: 950px){
+    .tech_stack {
+        /* margin-top: 2; */
+        /* margin-bottom: -4rem; */
     }
 }
 
