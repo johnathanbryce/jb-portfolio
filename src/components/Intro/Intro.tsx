@@ -26,14 +26,14 @@ export default function Intro() {
       </svg>
 
       <div className={styles.content_wrapper}>
-        <p> I&apos;m Johnathan Bryce, a dedicated Web Developer based in Vancouver. </p>
-        <p>Crafting dynamic, engaging websites and applications is my forte. A fervent learner, I&apos;m always in sync with the latest industry trends, ensuring innovative and modern solutions.</p>
-        <p> For web development inquiries, email me at <Link href="mailto:johnathanbryce@gmail.com" target='_blank' > johnathanbryce@gmail.com.</Link> </p>
+        <p> I&apos;m Johnathan Bryce, a Web Developer based in Vancouver. </p>
+        <p>I specialize in creating dynamic and engaging websites and applications. As a dedicated learner, I stay updated with the latest industry trends to deliver innovative and modern solutions.</p>
+        <p> For any development inquiries, email me at <Link href="mailto:johnathanbryce@gmail.com" target='_blank' > johnathanbryce@gmail.com.</Link> </p>
         <div className={styles.button_container}>
           <button className={styles.button} onClick={() =>setActiveContent('About')}>
             About
           </button>
-          <CustomLink href="https://www.johnbrycewebdev.com/" title="johnbrycewebdev.com"/>
+          <CustomLink href="https://www.bluewavedev.ca/" title="bluewavedev.ca"/>
         </div>
       </div>
     </article>
