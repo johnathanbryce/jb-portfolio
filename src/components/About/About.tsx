@@ -23,7 +23,7 @@ export default function About() {
         </div>
         <div className={styles.text_container_mobile_sub_380px}>
           <p> Started as a self-taught web developer during the pandemic, I expanded my skills through four BCIT courses. Moving from tutorials to hands-on projects, I embraced the &apos;Just. Keep. Building.&apos; approach for real growth. </p>
-          <p> Away from the keyboard, I&apos;m either at the gym, enjoying time with friends, or yelling at Canucks on my TV.</p>
+          <p> Away from the keyboard, I&apos;m either at the gym, enjoying time with friends, or yelling at the Canucks on my TV.</p>
         </div>
   </article>
   )
