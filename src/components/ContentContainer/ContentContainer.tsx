@@ -18,6 +18,9 @@ export default function ContentContainer() {
   // state
   const [activeCategory, setActiveCategory] = useState('Projects');
 
+  console.log(activeContent, 'active content from context')
+  // console.log(activeCategory, 'active category from ContentContainer')
+
   const toggleActiveCategory = (category: string) => {
     setActiveCategory(category);
   };
@@ -112,6 +115,7 @@ export default function ContentContainer() {
               contentList={['Fit Friends', 'Page Parrot', 'MyTube', 'Dice Game']} 
               setActiveContent={setActiveContent} 
               isActive={activeCategory === 'Projects'}
+              activeContent={activeContent}
             />
             <CategoryCard 
               title="Clients" 
@@ -119,6 +123,7 @@ export default function ContentContainer() {
               contentList={['Romp', 'Julien Verschooris', 'Labridge Farms']} 
               setActiveContent={setActiveContent} 
               isActive={activeCategory === 'Work'}
+              activeContent={activeContent}
             />
           </div>
         ) : ( 
@@ -128,6 +133,7 @@ export default function ContentContainer() {
               contentList={['About', 'Skills', 'Testimonials']} 
               setActiveContent={setActiveContent} 
               isActive={true}
+              activeContent={activeContent}
             />
           </div>
         )
