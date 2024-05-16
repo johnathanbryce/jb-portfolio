@@ -8,10 +8,13 @@ interface CategoryCardProps {
     setActiveContent: (content: string | null) => void;
     setActiveCategory?: () => void,
     isActive: boolean;
+    activeContent: string | null;
 }
 
-export default function CategoryCard({title, contentList, setActiveContent, setActiveCategory,  isActive}: CategoryCardProps) {
+export default function CategoryCard({title, contentList, setActiveContent, setActiveCategory, activeContent, isActive}: CategoryCardProps) {
     const [activeSection, setActiveSection] = useState<string | null>(null);
+
+    console.log(activeSection, 'card')
 
     // ensures that on the secondary click of activeSection, 'Intro' content is displayed
     const handleItemClick = (clickedSection: string) => {
@@ -25,6 +28,15 @@ export default function CategoryCard({title, contentList, setActiveContent, setA
         setActiveSection(null);
       }
     }, [isActive]);
+
+    // synchronize activeSection with activeContent from context
+    useEffect(() => {
+        if (activeContent && !contentList.includes(activeContent)) {
+            setActiveSection(null);
+        } else {
+            setActiveSection(activeContent);
+        }
+        }, [activeContent, contentList]);
  
     return (
     <div className={`${isActive ? styles.active : ''} ${styles.category_card}`}>
