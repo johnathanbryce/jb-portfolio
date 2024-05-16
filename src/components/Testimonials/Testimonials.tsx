@@ -25,6 +25,21 @@ export default function Testimonials() {
 
             <article className={styles.testimonial}>
                 <blockquote className={styles.testimonial_quote}>
+                    &quot;John has been a pleasure to work with on the Labridge Farms website. He communicated with me every step of the way and was always open to feedback and changes. His dedication and genuine interest in capturing the essence of our dog breeding and farm business made the process smooth and enjoyable. We continue to collaborate on updates to the website, big or small, and Johnathan handles them smoothly and efficiently. I couldn&apos;t be happier with the end result and highly recommend his services. &quot;
+                </blockquote>
+                <figcaption className={styles.testimonial_author}>
+                    <div className={styles.author_name}>
+                       <p><b>- Matthew Durant</b></p> 
+                    </div>
+                    <div className={styles.author_role}>
+                         <p> Owner: </p> 
+                         <CustomLink title="labridgefarms.com"  href='https://labridgefarms.com/'/>
+                    </div>
+                </figcaption>
+            </article>
+
+            <article className={styles.testimonial}>
+                <blockquote className={styles.testimonial_quote}>
                     &quot;Working with John on my portfolio site was a great experience. He nailed the details and captured the essence of my work. The project moved quickly and smoothly, thanks to John&apos;s skill and dedication. &quot;
                 </blockquote>
                 <figcaption className={styles.testimonial_author}>
