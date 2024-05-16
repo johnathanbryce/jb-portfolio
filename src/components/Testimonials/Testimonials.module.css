@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    max-width: 60vw;
 }
 
 .testimonial {
@@ -33,6 +34,7 @@
 /* Tablets (landscape) / Small Laptops) */
 @media (max-width: 1200px) { 
     .testimonials{
+
         max-width: 60vw; /* have to wrestle with the sizing due to the carousel */
     }
 }
@@ -40,6 +42,7 @@
 /* Tablets (portrait) */
 @media (max-width: 950px) { 
     .testimonials{
+
         max-width: 90vw; /* have to wrestle with the sizing due to the carousel */
     }
 }
