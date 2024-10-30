@@ -1,127 +1,134 @@
-.category_card, .list_flex_wrapper{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+.category_card,
+.list_flex_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.category_card{
-    position: relative;
-    padding: 2rem;
-    border-top-left-radius: var(--border-radius);
-    background: var(--background-primary); /* this stacks over the curver border to give the appearance of the curved half */
-    transition: transform 0.5s ease, opacity 0.5s ease;
+.category_card {
+  position: relative;
+  padding: 2rem;
+  border-top-left-radius: var(--border-radius);
+  background: var(
+    --background-primary
+  ); /* this stacks over the curver border to give the appearance of the curved half */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  cursor: pointer;
 }
 
 .list_flex_wrapper {
-    transform-style: preserve-3d; /* Required for 3D transforms on children */
-    transition: transform 0.5s ease; /* Smooth transition for the list */
+  transform-style: preserve-3d; /* Required for 3D transforms on children */
+  transition: transform 0.5s ease; /* Smooth transition for the list */
 }
 
 .category_card.active .list_flex_wrapper {
-    transform: scale(1.05) rotateY(0deg); /* Transform for active state */
+  transform: scale(1.05) rotateY(0deg); /* Transform for active state */
 }
 
 .category_card:not(.active) .list_flex_wrapper {
-    transform: scale(0.85) rotateX(180deg)rotateY(-25deg); /* Transform for inactive state */
-
+  transform: scale(0.85) rotateX(180deg) rotateY(-25deg); /* Transform for inactive state */
 }
 
 .category_card::before {
-    content: " ";
-    width: 9rem;
-    height: 9rem;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 50%, var(--accent-primary) 100%);
-    border-top-left-radius: var(--border-radius);
-    position: absolute;
-    top: -0.2rem; /* controls the "thickness" of the border by moving its position (match with height of the other lines at 0.2rem) */
-    right: -0.2rem; /* controls the "thickness" of the border by moving its position (match with height of the other lines at 0.2rem) */
-    position: absolute;
-    transform: translateZ(-1px); /* keeps the content partially hidden so the carousel animation can take effect */
-    transform-style: flat; /* This prevents it from being affected by 3D transforms */
-    z-index: -1;
-    transition: all .3s ease-in-out;
-    opacity: 0; /* initially hidden */
+  content: " ";
+  width: 9rem;
+  height: 9rem;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    var(--accent-primary) 0%,
+    var(--accent-secondary) 50%,
+    var(--accent-primary) 100%
+  );
+  border-top-left-radius: var(--border-radius);
+  position: absolute;
+  top: -0.2rem; /* controls the "thickness" of the border by moving its position (match with height of the other lines at 0.2rem) */
+  right: -0.2rem; /* controls the "thickness" of the border by moving its position (match with height of the other lines at 0.2rem) */
+  position: absolute;
+  transform: translateZ(
+    -1px
+  ); /* keeps the content partially hidden so the carousel animation can take effect */
+  transform-style: flat; /* This prevents it from being affected by 3D transforms */
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+  opacity: 0; /* initially hidden */
 }
 
 .category_card.active::before {
-    opacity: 1; /* visible when .active */
+  opacity: 1; /* visible when .active */
 }
 
 .category_card:not(.active) .title {
-    color: var(--inactive-color); /* Grey out the title */
-    cursor: pointer;
-    transition: all .3s ease-in-out;
+  color: var(--inactive-color); /* Grey out the title */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .category_card:not(.active) .link {
-    pointer-events: none; 
-    color: var(--inactive-color); 
-    transition: all .3s ease-in-out;
+  pointer-events: none;
+  color: var(--inactive-color);
+  transition: all 0.3s ease-in-out;
 }
-
 
 .active .title,
 .link {
-    cursor: pointer;
-    color: var(--font-primary); 
-    transition: color .3s ease; 
+  cursor: pointer;
+  color: var(--font-primary);
+  transition: color 0.3s ease;
 }
 
 .link {
-    position: relative; 
-    display: inline;
-    cursor: pointer;
-    transition: all .3s ease-in-out;
-    transform-origin: left;
-    color: var(--inactive-color);
-    /* opacity: 0.55;  */
+  position: relative;
+  display: inline;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  transform-origin: left;
+  color: var(--inactive-color);
+  /* opacity: 0.55;  */
 }
 
-.link:hover{
-    transform: scaleX(1.1);
+.link:hover {
+  transform: scaleX(1.1);
 }
 
 .link.active_link {
-   /*  opacity: 1;  */
-   color: var(--font-primary);
-    transform: scale(1.1);
+  /*  opacity: 1;  */
+  color: var(--font-primary);
+  transform: scale(1.1);
 }
 
-
-.link_text { 
-    position: relative;
-    display: inline;
-    font-size: clamp(1.2rem, 2vw, 1.6rem); /* match p tag from globals.css*/
+.link_text {
+  position: relative;
+  display: inline;
+  font-size: clamp(1.2rem, 2vw, 1.6rem); /* match p tag from globals.css*/
 }
 
 .active .link_text::after {
-    content: "";
-    height: 0.2rem;
-    background: linear-gradient(270deg,var(--accent-primary)0%, var(--accent-secondary)100%);
-    opacity: 0;;
-    opacity: 1;
-    transition: all .3s ease-in-out;
-    display: block;
-    position: absolute;
-    bottom: -0.5rem;
-    left: 0;
-    width: 100%;
+  content: "";
+  height: 0.2rem;
+  background: linear-gradient(270deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  opacity: 0;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  display: block;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 100%;
 }
 
 .active .link_text:hover::after {
-    background: linear-gradient(90deg, var(--accent-primary) 0%, var(--accent-secondary) 100%); 
+  background: linear-gradient(90deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
 }
 
 /* Tablets (portrait) */
-@media (max-width: 950px) { 
-    .category_card::before {
-        left: -0.2rem; /* controls the "thickness" of the border by moving its position (match with height of the other lines at 0.2rem) */
-
-    }
+@media (max-width: 950px) {
+  .category_card::before {
+    left: -0.2rem; /* controls the "thickness" of the border by moving its position (match with height of the other lines at 0.2rem) */
+  }
 }
 
 /* Mobile Devices up to 480px */
-@media (max-width: 480px) {  
+@media (max-width: 480px) {
 }
