@@ -19,7 +19,7 @@ export const useControlContent = () => useContext(ContentContext);
 
 // The ContentProvider.tsx context function:
 export function ContentProvider({ children }: { children: React.ReactNode }) {
-  const [activeContent, setActiveContent] = useState<string | null>(null);
+  const [activeContent, setActiveContent] = useState<string | null>("Intro");
   const [activeTechStack, setActiveTechStack] = useState<string[]>([])
 
   return (
