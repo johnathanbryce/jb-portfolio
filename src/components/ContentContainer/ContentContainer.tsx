@@ -42,9 +42,12 @@ export default function ContentContainer() {
       case "Page Parrot":
         setActiveTechStack(["javascript", "css", "api"]);
         break;
-      case "MyTube":
-        setActiveTechStack(["typescript", "next.js", "css", "api"]);
+      case "Screenshot Organizer":
+        setActiveTechStack(["python"]);
         break;
+      /* case "MyTube":
+        setActiveTechStack(["typescript", "next.js", "css", "api"]);
+        break; */
       case "Dice Game":
         setActiveTechStack(["javascript", "jquery", "css"]);
         break;
@@ -64,6 +67,9 @@ export default function ContentContainer() {
         break;
       case "Labridge Farms":
         setActiveTechStack(["typescript", "next.js", "css"]);
+        break;
+      case "Caseway":
+        setActiveTechStack(["typescript", "next.js", "python", "docker", "database", "api"]);
         break;
       case "SolLuna Essence":
         setActiveTechStack(["javascript", "jquery", "css"]);
@@ -124,7 +130,17 @@ export default function ContentContainer() {
             description="A Google Chrome extension that allows you to set, edit, and delete reminders for specific web pages. This project was an enjoyable return to vanilla JavaScript, marking my first venture into creating a Chrome extension."
           />
         );
-      case "MyTube":
+      case "Screenshot Organizer":
+        return (
+          <ContentCard
+            title="Screenshot Organizer"
+            isActive={activeContent === "Screenshot Organizer"}
+            github="https://github.com/johnathanbryce/screenshot-organizer"
+            techStack={["Python", "macOS", "LaunchAgent"]}
+            description="A lightweight macOS automation tool that automatically organizes screenshots into date-based folders with customizable naming conventions. Features easy setup, persistent background operation via LaunchAgent, configurable storage locations, and optional auto-cleanup. Designed for non-technical users with simple installation while maintaining full source transparency."
+          />
+        );
+      /* case "MyTube":
         return (
           <ContentCard
             title="My Tube"
@@ -134,7 +150,7 @@ export default function ContentContainer() {
             techStack={["TypeScript", "Next.js", "YouTube API"]}
             description="Fetches data from multiple YouTube channels, displaying the 8 latest videos for each. With fluid integration with the YouTube API, it keeps me updated on the latest content from my favourite creators, all in one place."
           />
-        );
+        ); */
       case "Quote Quest":
         return (
           <ContentCard
@@ -155,6 +171,27 @@ export default function ContentContainer() {
             techStack={["JavaScript", "jQuery"]}
             github="https://github.com/johnathanbryce/Dice-Game"
             description="A dice rolling game against a computer. Highest number after 3 rolls wins! My final individual project for BCIT's COMP2131 - Web Development with Javascript that received a final grade of 100%."
+          />
+        );
+      case "Caseway":
+        return (
+          <ContentCard
+            title="Caseway"
+            isActive={activeContent === "Caseway"}
+            url="https://caseway.ai"
+            techStack={[
+              "TypeScript",
+              "Next.js",
+              "Python",
+              "FastAPI",
+              "Docker",
+              "Redis",
+              "ElasticSearch",
+              "Digital Ocean",
+              "Claude AI",
+              "Gemini AI",
+            ]}
+            description="AI-powered legal technology platform serving 10k+ daily users. Core products include: (1) Legal Research Tool - intelligent case law analysis using Claude/Gemini with optimized RAG workflows, (2) Bespoke Agent - document management system enabling users to upload legal documents to ElasticSearch indices stored on Digital Ocean for AI-powered inference and retrieval, (3) Court Form Filler - automated form completion leveraging LLM integration. Products built with Next.js, TypeScript, Python, FastAPI, Docker, Redis, and ElasticSearch with comprehensive CI/CD pipelines."
           />
         );
       case "Romp":
@@ -250,7 +287,7 @@ export default function ContentContainer() {
           <CategoryCard
             title="Projects"
             setActiveCategory={() => toggleActiveCategory("Projects")}
-            contentList={["Fit Friends", "Page Parrot", "Quote Quest", "MyTube", "Dice Game"]}
+            contentList={["Screenshot Organizer", "Fit Friends", "Page Parrot", "Quote Quest", /* "MyTube", */ "Dice Game"]}
             setActiveContent={setActiveContent}
             isActive={activeCategory === "Projects"}
             activeContent={activeContent}
@@ -258,7 +295,7 @@ export default function ContentContainer() {
           <CategoryCard
             title="Clients"
             setActiveCategory={() => toggleActiveCategory("Work")}
-            contentList={["Julien Verschooris", "MCQ Markets", "Romp", "Labridge Farms"]}
+            contentList={["Caseway", "Julien Verschooris", "MCQ Markets", "Romp", "Labridge Farms"]}
             setActiveContent={setActiveContent}
             isActive={activeCategory === "Work"}
             activeContent={activeContent}
