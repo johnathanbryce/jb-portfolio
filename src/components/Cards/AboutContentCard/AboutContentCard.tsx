@@ -6,10 +6,7 @@ import { useControlContent } from '@/context/ContentProvider'
 
 interface ContentCardProps {
     title?: string,
-    children: any,
-    route?: string,
-    routeTitle?: string
-
+    children: React.ReactNode,
 }
 
 export default function AboutContentCard({title, children}: ContentCardProps) {
