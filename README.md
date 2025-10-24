@@ -98,17 +98,6 @@ npm run dev
 - **MCQ Markets** - Full-stack admin dashboard and authorization flow
 - **Romp** - Social activity planning app (React Native)
 
-## Deployment
-
-This portfolio is optimized for deployment on Vercel:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/johnathanbryce/jb-portfolio)
-
-Alternatively, deploy to any platform that supports Next.js:
-- Netlify
-- AWS Amplify
-- Digital Ocean
-- Self-hosted with Docker
 
 ## Contact
 
