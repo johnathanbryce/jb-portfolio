@@ -1,91 +1,82 @@
 .tech_stack {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    flex: 0; /* vs. content container */
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex: 0; /* vs. content container */
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .icon {
-    filter: grayscale(100%);
-    height: clamp(1rem, 2vw, 3rem);
-    width: clamp(1rem, 2vw, 3rem);
-    transition: transform 0.3s ease, filter 0.3s ease; 
-    animation: flipBack 0.5s ease-in-out forwards;
+  filter: grayscale(100%);
+  height: clamp(1rem, 2vw, 3rem);
+  width: clamp(1rem, 2vw, 3rem);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  animation: flipBack 0.5s ease-in-out forwards;
 }
 
 @keyframes flipBack {
-    from {
-        transform: scale(1.5) rotateY(360deg); 
-    }
-    to {
-        transform: scale(1) rotateY(720deg); 
-    }
+  from {
+    transform: scale(1.5) rotateY(360deg);
+  }
+  to {
+    transform: scale(1) rotateY(720deg);
+  }
 }
 
 .inactive {
-    animation: flipBack 0.5s ease-in-out forwards;
+  animation: flipBack 0.5s ease-in-out forwards;
 }
 
-
 .active {
-    filter: brightness(1.2);
-    transform-origin: 50%; /* animation from the center */
-    animation: flipfromCenter 0.5s ease-in-out forwards;
+  filter: brightness(1.2);
+  transform-origin: 50%; /* animation from the center */
+  animation: flipfromCenter 0.5s ease-in-out forwards;
 }
 
 @keyframes flipfromCenter {
-    from { 
-        transform: scale(0) rotateY(0deg); 
-    }
-    to { 
-        transform: scale(1.5) rotateY(360deg); 
-    }
+  from {
+    transform: scale(0) rotateY(0deg);
+  }
+  to {
+    transform: scale(1.5) rotateY(360deg);
+  }
 }
 
 /* Mobile Devices up to 480px */
-@media (max-width: 480px) {  
-    @keyframes flipfromCenter {
-        from { 
-            transform: scale(0) rotateY(0deg); 
-        }
-        to { 
-            transform: scale(2.5) rotateY(2.560deg); 
-        }
+@media (max-width: 480px) {
+  @keyframes flipfromCenter {
+    from {
+      transform: scale(0) rotateY(0deg);
     }
+    to {
+      transform: scale(2.5) rotateY(2.56deg);
+    }
+  }
 
-    @keyframes flipBack {
-        from {
-            transform: scale(2.5) rotateY(360deg); 
-        }
-        to {
-            transform: scale(1) rotateY(720deg); 
-        }
+  @keyframes flipBack {
+    from {
+      transform: scale(2.5) rotateY(360deg);
     }
-}
-
-/* Tablets (portrait) */
-@media (max-width: 950px){
-    .tech_stack {
-        /* margin-top: 2; */
-        /* margin-bottom: -4rem; */
+    to {
+      transform: scale(1) rotateY(720deg);
     }
+  }
 }
 
 /* Mobile Devices up to 380px */
-@media (max-width: 380px) {  
-    .tech_stack{
-        margin-bottom: 1.5rem;
-    }
+@media (max-width: 380px) {
+  .tech_stack {
+    margin-bottom: 1.5rem;
+  }
 }
 
 /* Tiny Mobile Devices up to 325px (e.g. galaxy fold) */
-@media (max-width: 325px) {  
-    .icon {
-        height: 0.8rem;
-        width: 0.8rem;
-    }
+@media (max-width: 325px) {
+  .icon {
+    height: 0.8rem;
+    width: 0.8rem;
+  }
 }

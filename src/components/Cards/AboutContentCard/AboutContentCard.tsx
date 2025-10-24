@@ -21,8 +21,8 @@ export default function AboutContentCard({title, children}: ContentCardProps) {
       <div className={styles.content_wrapper}>
           {children}
           <div className={styles.button_container}>
-              <button className={styles.button} onClick={() =>setActiveContent('Projects')}>
-                Back to Projects/Work
+              <button className={styles.button} onClick={() =>setActiveContent("Intro")}>
+                Back to Home
               </button>
           </div>
       </div>

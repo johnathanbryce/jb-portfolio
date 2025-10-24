@@ -17,6 +17,7 @@ export default function Skills() {
         <h5>Backend</h5>
         <ul>
             <li>Node.js</li>
+            <li>Python, FastAPI</li>
             <li>Firebase Realtime Database</li>
             <li>Firebase Authentication</li>
         </ul>
@@ -28,6 +29,15 @@ export default function Skills() {
           <li>RESTful APIs, Google APIs</li>
           <li>Custom Backend APIs</li>
           <li>API Integration</li>
+        </ul>
+    </div>
+
+    <div className={styles.skills_category}>
+        <h5>AI & Infrastructure:</h5>
+        <ul>
+          <li>LLM Agent Building (Claude, Gemini)</li>
+          <li>Docker, Docker Compose</li>
+          <li>ElasticSearch, Redis</li>
         </ul>
     </div>
 

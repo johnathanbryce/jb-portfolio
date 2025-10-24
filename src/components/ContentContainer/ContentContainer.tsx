@@ -14,7 +14,8 @@ import { useControlContent } from "@/context/ContentProvider";
 
 export default function ContentContainer() {
   // context
-  const { activeContent, setActiveContent, setActiveTechStack } = useControlContent();
+  const { activeContent, setActiveContent, setActiveTechStack } =
+    useControlContent();
   // state
   const [activeCategory, setActiveCategory] = useState("Projects");
 
@@ -45,9 +46,6 @@ export default function ContentContainer() {
       case "Screenshot Organizer":
         setActiveTechStack(["python"]);
         break;
-      /* case "MyTube":
-        setActiveTechStack(["typescript", "next.js", "css", "api"]);
-        break; */
       case "Dice Game":
         setActiveTechStack(["javascript", "jquery", "css"]);
         break;
@@ -69,7 +67,17 @@ export default function ContentContainer() {
         setActiveTechStack(["typescript", "next.js", "css"]);
         break;
       case "Caseway":
-        setActiveTechStack(["typescript", "next.js", "python", "docker", "database", "api"]);
+        setActiveTechStack([
+          "typescript",
+          "next.js",
+          "python",
+          "fastapi",
+          "docker",
+          "redis",
+          "elasticsearch",
+          "database",
+          "api",
+        ]);
         break;
       case "SolLuna Essence":
         setActiveTechStack(["javascript", "jquery", "css"]);
@@ -140,23 +148,12 @@ export default function ContentContainer() {
             description="A lightweight macOS automation tool that automatically organizes screenshots into date-based folders with customizable naming conventions. Features easy setup, persistent background operation via LaunchAgent, configurable storage locations, and optional auto-cleanup. Designed for non-technical users with simple installation while maintaining full source transparency."
           />
         );
-      /* case "MyTube":
-        return (
-          <ContentCard
-            title="My Tube"
-            isActive={activeContent === "MyTube"}
-            url="https://mytube-jb.vercel.app/"
-            github="https://github.com/johnathanbryce/mytube"
-            techStack={["TypeScript", "Next.js", "YouTube API"]}
-            description="Fetches data from multiple YouTube channels, displaying the 8 latest videos for each. With fluid integration with the YouTube API, it keeps me updated on the latest content from my favourite creators, all in one place."
-          />
-        ); */
       case "Quote Quest":
         return (
           <ContentCard
             title="Quote Quest"
             isActive={activeContent === "Quote Quest"}
-            url="https://www.quotequest.dev/"
+            url="https://quote-quest-liard.vercel.app/"
             github="https://github.com/johnathanbryce/quote-quest"
             techStack={["React", "TypeScript", "SCSS"]}
             description="A quote guessing game where players determine if a quote is AI-generated or attributed to one of four celebrities (Donald Trump, Charlie Sheen, Ozzy Osbourne, Kanye West). Players earn points by correctly identifying the source, competing head-to-head against the computer."
@@ -287,7 +284,13 @@ export default function ContentContainer() {
           <CategoryCard
             title="Projects"
             setActiveCategory={() => toggleActiveCategory("Projects")}
-            contentList={["Screenshot Organizer", "Fit Friends", "Page Parrot", "Quote Quest", /* "MyTube", */ "Dice Game"]}
+            contentList={[
+              "Screenshot Organizer",
+              "Fit Friends",
+              "Page Parrot",
+              "Quote Quest",
+              "Dice Game",
+            ]}
             setActiveContent={setActiveContent}
             isActive={activeCategory === "Projects"}
             activeContent={activeContent}
@@ -295,7 +298,13 @@ export default function ContentContainer() {
           <CategoryCard
             title="Clients"
             setActiveCategory={() => toggleActiveCategory("Work")}
-            contentList={["Caseway", "Julien Verschooris", "MCQ Markets", "Romp", "Labridge Farms"]}
+            contentList={[
+              "Caseway",
+              "Julien Verschooris",
+              "MCQ Markets",
+              "Romp",
+              "Labridge Farms",
+            ]}
             setActiveContent={setActiveContent}
             isActive={activeCategory === "Work"}
             activeContent={activeContent}
