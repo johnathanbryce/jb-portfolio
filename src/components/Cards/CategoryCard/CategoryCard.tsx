@@ -9,6 +9,7 @@ interface CategoryCardProps {
   setActiveCategory?: () => void;
   isActive: boolean;
   activeContent: string | null;
+  maxVisibleItems?: number; // Number of items to show before "View More"
 }
 
 export default function CategoryCard({
@@ -18,8 +19,10 @@ export default function CategoryCard({
   setActiveCategory,
   activeContent,
   isActive,
+  maxVisibleItems = contentList.length, // Default to showing all items
 }: CategoryCardProps) {
   const [activeSection, setActiveSection] = useState<string | null>(null);
+  const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
   // ensures that on the secondary click of activeSection, 'Intro' content is displayed
   const handleItemClick = (clickedSection: string) => {
@@ -43,6 +46,16 @@ export default function CategoryCard({
     }
   }, [activeContent, contentList]);
 
+  // Determine which items to display
+  const hasMore = contentList.length > maxVisibleItems;
+  const visibleItems = isExpanded ? contentList : contentList.slice(0, maxVisibleItems);
+  const hiddenCount = contentList.length - maxVisibleItems;
+
+  const toggleExpanded = (e: React.MouseEvent) => {
+    e.stopPropagation(); // Prevent triggering setActiveCategory
+    setIsExpanded(!isExpanded);
+  };
+
   return (
     <div
       className={`${isActive ? styles.active : ""} ${styles.category_card}`}
@@ -50,7 +63,7 @@ export default function CategoryCard({
     >
       <h2 className={styles.title}>{title}</h2>
       <ul className={styles.list_flex_wrapper}>
-        {contentList.map((content: any, index: number) => (
+        {visibleItems.map((content: any, index: number) => (
           <li
             key={index}
             className={`${styles.link} ${activeSection === content ? styles.active_link : ""}`}
@@ -62,6 +75,15 @@ export default function CategoryCard({
           </li>
         ))}
       </ul>
+      {hasMore && (
+        <button
+          className={styles.view_more_button}
+          onClick={toggleExpanded}
+          aria-label={isExpanded ? "View less items" : `View ${hiddenCount} more items`}
+        >
+          {isExpanded ? "↑ View Less" : `↓ View More (${hiddenCount})`}
+        </button>
+      )}
     </div>
   );
 }

@@ -82,6 +82,9 @@ export default function ContentContainer() {
       case "SolLuna Essence":
         setActiveTechStack(["javascript", "jquery", "css"]);
         break;
+      case "MyTube":
+        setActiveTechStack(["typescript", "react", "api", "css"]);
+        break;
       default:
         setActiveTechStack([]);
     }
@@ -168,6 +171,17 @@ export default function ContentContainer() {
             techStack={["JavaScript", "jQuery"]}
             github="https://github.com/johnathanbryce/Dice-Game"
             description="A dice rolling game against a computer. Highest number after 3 rolls wins! My final individual project for BCIT's COMP2131 - Web Development with Javascript that received a final grade of 100%."
+          />
+        );
+      case "MyTube":
+        return (
+          <ContentCard
+            title="MyTube"
+            isActive={activeContent === "MyTube"}
+            url="https://mytube-jb.vercel.app/"
+            github="https://github.com/johnathanbryce/mytube"
+            techStack={["React", "TypeScript", "Google API (YouTube)", "CSS"]}
+            description="MyTube fetches data from multiple YouTube channels, displaying the 8 latest videos for each. With seamless integration with the YouTube API, it keeps me updated on the latest content from my favourite creators, all in one place."
           />
         );
       case "Caseway":
@@ -264,6 +278,17 @@ export default function ContentContainer() {
             description="The digital gateway to Labridge Farms, highlighting their premium farm-raised meats and high-quality Labrador Retrievers. It offers visitors an opportunity to explore and buy farm-fresh meats and learn about adopting one of their available or upcoming Labrador Retrievers."
           />
         );
+      case "SolLuna Essence":
+        return (
+          <ContentCard
+            title="SolLuna Essence"
+            isActive={activeContent === "SolLuna Essence"}
+            url="https://www.sollunaessence.com/"
+            github="https://github.com/johnathanbryce/SolLuna-Essence"
+            techStack={["JavaScript", "jQuery", "SCSS", "CSS", "HTML"]}
+            description="This site provides current and prospective patrons a landing page to learn about and access services for spiritual healing and guidance techniques from Bio-Energy Healing Practitioner and Intuitive reader, Sydney Fisher."
+          />
+        );
       default:
         return <Intro />;
     }
@@ -290,10 +315,12 @@ export default function ContentContainer() {
               "Page Parrot",
               "Quote Quest",
               "Dice Game",
+              "MyTube",
             ]}
             setActiveContent={setActiveContent}
             isActive={activeCategory === "Projects"}
             activeContent={activeContent}
+            maxVisibleItems={4}
           />
           <CategoryCard
             title="Clients"
@@ -304,10 +331,12 @@ export default function ContentContainer() {
               "MCQ Markets",
               "Romp",
               "Labridge Farms",
+              "SolLuna Essence",
             ]}
             setActiveContent={setActiveContent}
             isActive={activeCategory === "Work"}
             activeContent={activeContent}
+            maxVisibleItems={4}
           />
         </div>
       ) : (
