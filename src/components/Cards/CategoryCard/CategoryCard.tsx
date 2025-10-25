@@ -81,7 +81,7 @@ export default function CategoryCard({
           onClick={toggleExpanded}
           aria-label={isExpanded ? "View less items" : `View ${hiddenCount} more items`}
         >
-          {isExpanded ? "↑ View Less" : `↓ View More (${hiddenCount})`}
+          {isExpanded ? "View Less" : `View More (${hiddenCount})`}
         </button>
       )}
     </div>
