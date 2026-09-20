@@ -16,28 +16,27 @@ const k2d = K2D({
 })
 
 export const metadata: Metadata = {
-  title: 'John Bryce | Full-Stack Developer Portfolio',
-  description: "Full-stack developer specializing in Next.js, React, TypeScript, Python, and AI-powered applications. Browse my portfolio featuring projects like Caseway AI legal research platform, Screenshot Organizer, and Fit Friends.",
-  keywords: 'full-stack developer, web development, John Bryce, software engineer, Next.js, React, TypeScript, Python, FastAPI, AI development, LLM integration, portfolio',
+  title: 'John Bryce | Full Stack & AI Software Engineer',
+  description: "Full stack and AI software engineer in Vancouver. Lead engineer on Caseway's AI legal research platform; builds production web applications and LLM-powered systems with Next.js, TypeScript, Python, and FastAPI.",
+  keywords: 'John Bryce, full stack engineer, AI engineer, software engineer, Vancouver, Next.js, React, TypeScript, Python, FastAPI, LangChain, RAG, LLM, portfolio',
   authors: [{ name: 'John Bryce' }],
   creator: 'John Bryce',
-  metadataBase: new URL('https://johnbryce.dev'),
+  metadataBase: new URL('https://www.jbryce.dev'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'John Bryce | Full-Stack Developer Portfolio',
-    description: 'Full-stack developer specializing in Next.js, React, TypeScript, Python, and AI-powered applications.',
-    url: 'https://johnbryce.dev',
+    title: 'John Bryce | Full Stack & AI Software Engineer',
+    description: 'Full stack and AI software engineer in Vancouver. Production web applications and LLM-powered systems.',
+    url: 'https://www.jbryce.dev',
     siteName: 'John Bryce Portfolio',
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'John Bryce | Full-Stack Developer Portfolio',
-    description: 'Full-stack developer specializing in Next.js, React, TypeScript, Python, and AI-powered applications.',
-    creator: '@johnbryce',
+    title: 'John Bryce | Full Stack & AI Software Engineer',
+    description: 'Full stack and AI software engineer in Vancouver. Production web applications and LLM-powered systems.',
   },
   robots: {
     index: true,
