@@ -5,49 +5,42 @@ export default function Skills() {
   return (
   <article className={styles.skills}>
     <div className={styles.skills_category}>
-        <h5>Frontend</h5>
+        <h5>Languages & Frameworks</h5>
         <ul>
-            <li>JavaScript ES6, TypeScript</li>
-            <li>Vanilla CSS, SASS</li>
-            <li>React, Next.js, jQuery </li>
-        </ul>
-    </div>
-
-    <div className={styles.skills_category}>
-        <h5>Backend</h5>
-        <ul>
-            <li>Node.js</li>
             <li>Python, FastAPI</li>
-            <li>Firebase Realtime Database</li>
-            <li>Firebase Authentication</li>
+            <li>TypeScript, JavaScript</li>
+            <li>Next.js, React, React Native</li>
+            <li>Node.js</li>
         </ul>
     </div>
 
     <div className={styles.skills_category}>
-        <h5>APIs:</h5>
+        <h5>AI & Retrieval</h5>
         <ul>
-          <li>RESTful APIs, Google APIs</li>
-          <li>Custom Backend APIs</li>
-          <li>API Integration</li>
+          <li>Claude & Gemini APIs</li>
+          <li>LangChain + LangGraph</li>
+          <li>RAG & hybrid search (Elasticsearch)</li>
+          <li>Agent tool calling</li>
         </ul>
     </div>
 
     <div className={styles.skills_category}>
-        <h5>AI & Infrastructure:</h5>
+        <h5>Backend & Data</h5>
         <ul>
-          <li>LLM Agent Building (Claude, Gemini)</li>
-          <li>Docker, Docker Compose</li>
-          <li>ElasticSearch, Redis</li>
+            <li>PostgreSQL, Redis</li>
+            <li>SQLAlchemy + Alembic</li>
+            <li>Prisma</li>
+            <li>Celery</li>
         </ul>
     </div>
 
     <div className={styles.skills_category}>
-        <h5>Misc:</h5>
+        <h5>Infrastructure & DevOps</h5>
         <ul>
-          <li>Git/GitHub</li>
-          <li>Recoil</li>
-          <li>React Router</li>
-          <li>Figma</li>
+          <li>DigitalOcean, Azure</li>
+          <li>Docker, Nginx</li>
+          <li>GitHub Actions CI/CD</li>
+          <li>AWS (Cognito, Lambda), Sentry</li>
         </ul>
     </div>
   </article>

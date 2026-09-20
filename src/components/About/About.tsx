@@ -17,12 +17,8 @@ export default function About() {
             />
         </div>
         <div className={styles.text_container}>
-          <p> Beginning as a self-taught enthusiast, my web development journey began during the pandemic, and gained depth through four BCIT courses that deepened my interest in the field. What started as a hobby rapidly evolved into a passion. </p>
-          <p> A pivotal lesson for me has been the shift from tutorial-based learning to hands-on coding and project creation. Embracing the principle of &quot;Just. Keep. Building.&quot; has shown me that practical experience is key to genuine growth and understanding in web development.</p>
-          <p> Away from the keyboard, I&apos;m either at the gym, enjoying time with friends, or yelling at Canucks on my TV.</p>
-        </div>
-        <div className={styles.text_container_mobile_sub_380px}>
-          <p> Started as a self-taught web developer during the pandemic, I expanded my skills through four BCIT courses. Moving from tutorials to hands-on projects, I embraced the &apos;Just. Keep. Building.&apos; approach for real growth. </p>
+          <p> I came to software from analyst roles in the public sector, teaching myself during the pandemic and rounding that out with courses at BCIT. What started as a hobby became a career: founding frontend developer at Romp, contract full stack work for MCQ Markets, and then lead engineer on Caseway&apos;s AI legal research platform, where I ran the backend, the infrastructure, and a small offshore team. </p>
+          <p> The lesson that stuck was the shift from tutorials to shipping. &quot;Just. Keep. Building.&quot; is still how I learn anything new, whether that&apos;s an agent framework or a data pipeline.</p>
           <p> Away from the keyboard, I&apos;m either at the gym, enjoying time with friends, or yelling at the Canucks on my TV.</p>
         </div>
   </article>

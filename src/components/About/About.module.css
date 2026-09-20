@@ -27,11 +27,6 @@
     flex: 1;
 }
 
-.text_container_mobile_sub_380px{
-    display: none; /* only appears on tiny mobile phones (iphone SE, galaxy fold, etc) */
-}
-
-
 .quote {
     padding: 0;
     margin: 1rem;
@@ -96,23 +91,6 @@
 @media (max-width: 480px) {  
     .text_container {
         gap: 1rem;
-    }
-}
-
-/* Tiny Mobile Devices up to 325px (e.g. galaxy fold) */
-@media (max-width: 325px) {  
-
-    .text_container {
-        display: none;
-
-    }
-    
-    .text_container_mobile_sub_380px{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 1rem;
-        flex: 1;
     }
 }
 

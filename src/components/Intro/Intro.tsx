@@ -26,8 +26,8 @@ export default function Intro() {
       </svg>
 
       <div className={styles.content_wrapper}>
-        <p> I&apos;m Johnathan Bryce, a Web Developer based in Vancouver. </p>
-        <p>I specialize in creating dynamic and engaging websites and applications. As a dedicated learner, I stay updated with the latest industry trends to deliver innovative and modern solutions.</p>
+        <p> I&apos;m Johnathan Bryce, a full stack and AI software engineer based in Vancouver. </p>
+        <p>I build production web applications and LLM-powered systems. Most recently I was lead engineer on Caseway&apos;s AI legal research platform, where I owned the backend, the research agent, and the infrastructure behind them.</p>
         <p> For any development inquiries, email me at <Link href="mailto:johnathanbryce@gmail.com" target='_blank' > johnathanbryce@gmail.com.</Link> </p>
         <div className={styles.button_container}>
           <button className={styles.button} onClick={() =>setActiveContent('About')}>
