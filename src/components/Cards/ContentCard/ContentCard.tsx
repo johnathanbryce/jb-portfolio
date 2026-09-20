@@ -6,12 +6,9 @@ import CustomLink from "@/components/CustomLink/CustomLink";
 interface ContentCardProps {
   title: string;
   techStack: string[];
-  isActive: boolean;
   description: string;
   url?: string;
   github?: string;
-  appStore?: string;
-  googlePlay?: string;
 }
 
 export default function ContentCard({
@@ -20,8 +17,6 @@ export default function ContentCard({
   description,
   url,
   github,
-  appStore,
-  googlePlay,
 }: ContentCardProps) {
   return (
     <article className={styles.content_card}>
@@ -43,8 +38,6 @@ export default function ContentCard({
           )}
 
           {github && <CustomLink href={github} title="GitHub" />}
-          {appStore ? <CustomLink href={appStore} title="App Store" /> : null}
-          {googlePlay ? <CustomLink href={googlePlay} title="Google Play" /> : null}
         </div>
       </div>
     </article>
