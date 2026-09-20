@@ -1,29 +1,29 @@
-# John Bryce - Web Development Portfolio
+# John Bryce - Portfolio
 
-A modern, interactive portfolio website showcasing my full-stack web development projects and professional experience. Built with Next.js 14, TypeScript, and React, featuring dynamic content management and responsive design.
+Personal portfolio at [jbryce.dev](https://www.jbryce.dev). Built with Next.js 16, React 19, and TypeScript.
 
 ## Overview
 
-This portfolio highlights my work as a full-stack developer, including projects ranging from AI-powered legal research platforms to personal automation tools. The site features an intuitive navigation system with animated transitions and interactive project cards.
+Single-page site with animated category navigation. All project and work content lives in one typed array in `src/data/projects.ts`; the cards, lists, and tech-stack icons are derived from it.
 
 ## Tech Stack
 
-- **Framework**: Next.js 14 (App Router)
+- **Framework**: Next.js 16 (App Router)
 - **Language**: TypeScript
 - **Styling**: CSS Modules
 - **State Management**: React Context API
 - **Icons**: React Icons
 - **Carousel**: Embla Carousel
-- **Node.js**: >= 18.0.0
+- **Node.js**: >= 20.0.0
 
 ## Features
 
 - Dynamic project and client showcase
-- Interactive category navigation (Projects/Clients/About)
+- Interactive category navigation (Projects/Work/About)
 - Tech stack visualization with dynamic icon highlighting
 - Responsive design for mobile, tablet, and desktop
 - Smooth animations and transitions
-- Direct links to live projects, GitHub repos, and app stores
+- Direct links to live projects and GitHub repos
 - Contact integration (Email, LinkedIn, GitHub)
 
 ## Project Structure
@@ -32,7 +32,10 @@ This portfolio highlights my work as a full-stack developer, including projects 
 src/
 ├── app/                    # Next.js app directory
 │   ├── layout.tsx         # Root layout with metadata
-│   └── page.tsx           # Home page
+│   ├── page.tsx           # Home page
+│   ├── opengraph-image.tsx
+│   ├── sitemap.ts
+│   └── robots.ts
 ├── components/
 │   ├── ContentContainer/  # Main content switcher
 │   ├── Cards/             # Project and client cards
@@ -45,6 +48,8 @@ src/
 │   └── TechStackDetails/  # Tech stack icons
 ├── context/
 │   └── ContentProvider.tsx # Global state management
+├── data/
+│   └── projects.ts        # All project and work content
 └── styles/
     ├── globals.css        # Global styles
     ├── vars.css           # CSS variables
@@ -55,7 +60,7 @@ src/
 
 ### Prerequisites
 
-- Node.js 18.0.0 or higher
+- Node.js 20.0.0 or higher
 - npm, yarn, pnpm, or bun
 
 ### Installation
@@ -85,24 +90,10 @@ npm run dev
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
 
-## Featured Projects
-
-- **Screenshot Organizer** - Python macOS automation tool for organizing screenshots
-- **Fit Friends** - Full-stack fitness challenge platform (Next.js, Firebase)
-- **Page Parrot** - Chrome extension for webpage reminders
-- **Quote Quest** - AI vs. Celebrity quote guessing game
-
-## Professional Experience
-
-- **Caseway** - AI-powered legal research platform (Next.js, Python, FastAPI, ElasticSearch)
-- **MCQ Markets** - Full-stack admin dashboard and authorization flow
-- **Romp** - Social activity planning app (React Native)
-
-
 ## Contact
 
-- **Email**: contact@bluewavedev.ca
-- **LinkedIn**: [linkedin.com/in/johnbryce-web-dev](https://www.linkedin.com/in/johnbryce-web-dev/)
+- **Email**: johnathanbryce@gmail.com
+- **LinkedIn**: [linkedin.com/in/johnathanbryce](https://www.linkedin.com/in/johnathanbryce/)
 - **GitHub**: [github.com/johnathanbryce](https://github.com/johnathanbryce)
 
 ## License

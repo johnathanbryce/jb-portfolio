@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "./CategoryCard.module.css";
 
 interface CategoryCardProps {
@@ -21,30 +21,11 @@ export default function CategoryCard({
   isActive,
   maxVisibleItems = contentList.length, // Default to showing all items
 }: CategoryCardProps) {
-  const [activeSection, setActiveSection] = useState<string | null>(null);
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
-  // ensures that on the secondary click of activeSection, 'Intro' content is displayed
-  const handleItemClick = (clickedSection: string) => {
-    setActiveContent(clickedSection);
-    setActiveSection(clickedSection);
-  };
-
-  // removes .active_link class when a different CategoryCard is selected
-  useEffect(() => {
-    if (!isActive) {
-      setActiveSection(null);
-    }
-  }, [isActive]);
-
-  // synchronize activeSection with activeContent from context
-  useEffect(() => {
-    if (activeContent && !contentList.includes(activeContent)) {
-      setActiveSection(null);
-    } else {
-      setActiveSection(activeContent);
-    }
-  }, [activeContent, contentList]);
+  // the highlighted item is derived from context: only when this card is active and owns the content
+  const activeSection =
+    isActive && activeContent && contentList.includes(activeContent) ? activeContent : null;
 
   // Determine which items to display
   const hasMore = contentList.length > maxVisibleItems;
@@ -67,9 +48,7 @@ export default function CategoryCard({
           <li
             key={index}
             className={`${styles.link} ${activeSection === content ? styles.active_link : ""}`}
-            onClick={() => {
-              handleItemClick(content);
-            }}
+            onClick={() => setActiveContent(content)}
           >
             <div className={styles.link_text}>{content}</div>
           </li>
